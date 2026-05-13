@@ -15,6 +15,7 @@
 }
 html,body{height:100%;background:var(--paper-2);color:var(--ink);font-family:var(--sans);font-size:14px;-webkit-font-smoothing:antialiased;}
 
+/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;height:52px;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;align-items:center;padding:0 28px;gap:12px;z-index:100;}
 .logo{font-family:var(--serif);font-size:20px;letter-spacing:-.02em;}
 .logo-tag{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:2px 7px;}
@@ -25,6 +26,7 @@ html,body{height:100%;background:var(--paper-2);color:var(--ink);font-family:var
 .live-dot{width:6px;height:6px;border-radius:50%;background:#16a34a;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 
+/* SHELL */
 .shell{padding-top:52px;min-height:100vh;}
 .page-hd{background:var(--paper);border-bottom:1px solid var(--rule);padding:22px 28px 20px;}
 .eyebrow{font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-5);margin-bottom:6px;}
@@ -33,28 +35,44 @@ html,body{height:100%;background:var(--paper-2);color:var(--ink);font-family:var
 .hd-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;}
 .hd-right{display:flex;flex-direction:column;gap:8px;align-items:flex-end;flex-shrink:0;}
 
+/* TABS */
 .tab-bar{display:flex;background:var(--paper);border-bottom:1px solid var(--rule);padding:0 28px;overflow-x:auto;}
 .tab{padding:12px 18px;font-size:13px;font-weight:500;color:var(--ink-4);cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:var(--sans);transition:all .12s;white-space:nowrap;}
 .tab:hover{color:var(--ink-2);}
 .tab.on{color:var(--ink);border-bottom-color:var(--ink);}
 
+/* PILLS / BUTTONS */
 .pill-row{display:inline-flex;gap:3px;padding:3px;background:var(--paper-2);border-radius:999px;border:1px solid var(--rule);}
 .pill{padding:5px 14px;font-size:12px;font-weight:500;color:var(--ink-4);border-radius:999px;cursor:pointer;border:none;background:transparent;font-family:var(--sans);transition:all .12s;}
 .pill:hover{color:var(--ink-2);}
 .pill.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08);}
-
 .btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;font-size:12.5px;font-weight:500;background:var(--card);color:var(--ink);border:1px solid var(--rule-s);border-radius:6px;cursor:pointer;font-family:var(--sans);transition:all .12s;white-space:nowrap;}
 .btn:hover{background:var(--paper-2);}
-.btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink);}
 .btn-sm{height:28px;padding:0 10px;font-size:12px;}
 
 .page-bd{padding:20px 28px 48px;}
 
-/* BEFORE/AFTER BANNER */
-.baf-strip{display:grid;grid-template-columns:1fr auto 1fr;gap:0;background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:16px;}
+/* COMMISSION STRIP */
+.commission-strip{background:var(--paper-2);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--ink-3);}
+.commission-badge{font-size:11px;font-weight:700;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:2px 8px;white-space:nowrap;}
+
+/* PROCESS MAP */
+.proc-strip{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 20px;margin-bottom:14px;overflow-x:auto;}
+.proc-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-5);margin-bottom:12px;}
+.proc-row{display:flex;align-items:center;gap:0;margin-bottom:6px;}
+.proc-row-label{font-size:10px;font-weight:600;width:90px;flex-shrink:0;color:var(--ink-4);}
+.proc-stages-wrap{display:flex;align-items:center;gap:0;flex:1;}
+.proc-stage{display:flex;align-items:center;flex:1;}
+.proc-box{flex:1;text-align:center;padding:5px 4px;border-radius:5px;font-size:9.5px;font-weight:500;line-height:1.3;min-width:72px;}
+.proc-box.bad{background:#fef2f2;color:#991b1b;border:1px solid #fecaca;}
+.proc-box.good{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;}
+.proc-arrow{font-size:11px;color:var(--ink-6);padding:0 3px;flex-shrink:0;}
+.proc-legend{display:flex;gap:16px;margin-top:10px;font-size:10.5px;color:var(--ink-5);}
+.proc-dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;}
+
+/* BEFORE/AFTER */
+.baf-strip{display:grid;grid-template-columns:1fr auto 1fr;background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:14px;}
 .baf-side{padding:18px 22px;}
-.baf-side.before{border-right:none;}
-.baf-side.after{border-left:none;}
 .baf-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px;display:flex;align-items:center;gap:6px;}
 .baf-label.b{color:#991b1b;}
 .baf-label.a{color:#166534;}
@@ -62,13 +80,13 @@ html,body{height:100%;background:var(--paper-2);color:var(--ink);font-family:var
 .baf-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule);}
 .baf-row:last-child{border-bottom:none;}
 .baf-metric{font-size:12px;color:var(--ink-4);}
-.baf-val{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--ink);}
+.baf-val{font-family:var(--mono);font-size:12.5px;font-weight:500;}
 .baf-val.bad{color:#991b1b;}
 .baf-val.good{color:#166534;}
 .baf-source{font-size:10px;color:var(--ink-6);font-family:var(--mono);margin-top:3px;}
 
-/* HERO — time-based */
-.hero{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:16px;}
+/* HERO */
+.hero{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:14px;}
 .hero-cell{padding:20px 22px;border-right:1px solid var(--rule);}
 .hero-cell:last-child{border-right:none;}
 .hero-cell:first-child{border-left:4px solid var(--ink);}
@@ -76,12 +94,8 @@ html,body{height:100%;background:var(--paper-2);color:var(--ink);font-family:var
 .h-val{font-family:var(--serif);font-size:30px;font-weight:400;letter-spacing:-.02em;color:var(--ink);margin:6px 0 4px;line-height:1.0;}
 .h-sub{font-size:11px;color:var(--ink-5);line-height:1.4;}
 
-/* COMMISSION CALLOUT */
-.commission-strip{background:var(--paper-2);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:16px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--ink-3);}
-.commission-badge{font-size:11px;font-weight:700;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:2px 8px;white-space:nowrap;}
-
 /* SIM GRID */
-.sim-grid{display:grid;grid-template-columns:380px 1fr;gap:16px;align-items:start;}
+.sim-grid{display:grid;grid-template-columns:360px 1fr;gap:16px;align-items:start;}
 
 /* CARD */
 .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
@@ -90,18 +104,16 @@ html,body{height:100%;background:var(--paper-2);color:var(--ink);font-family:var
 .card-sub{font-size:11px;color:var(--ink-5);margin-top:2px;}
 .card-bd{padding:18px;}
 .divider{height:1px;background:var(--rule);margin:16px 0;}
-
-/* SECTION HEADER */
-.sec-ey{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-5);margin-bottom:14px;}
+.sec-ey{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-5);margin-bottom:12px;}
 
 /* SLIDERS */
-.field{margin-bottom:20px;}
+.field{margin-bottom:18px;}
 .field:last-child{margin-bottom:0;}
-.field-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;}
+.field-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;}
 .field-label{font-size:12.5px;font-weight:500;color:var(--ink-2);}
 .field-hint{font-size:10.5px;color:var(--ink-5);margin-top:2px;line-height:1.4;}
 .field-val{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);}
-.track{position:relative;height:4px;background:var(--paper-3);border-radius:2px;margin:8px 0 4px;}
+.track{position:relative;height:4px;background:var(--paper-3);border-radius:2px;margin:7px 0 4px;}
 .fill{position:absolute;left:0;top:0;height:100%;background:var(--ink);border-radius:2px;pointer-events:none;transition:width .08s;}
 input[type=range]{width:100%;height:4px;border-radius:2px;appearance:none;background:transparent;outline:none;cursor:pointer;margin:0;position:relative;z-index:1;}
 input[type=range]::-webkit-slider-thumb{appearance:none;width:20px;height:20px;border-radius:50%;background:var(--card);border:2px solid var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:grab;transition:transform .1s;}
@@ -109,13 +121,20 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15);}
 input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--card);border:2px solid var(--ink);cursor:grab;}
 .range-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--ink-6);font-family:var(--mono);}
 .data-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:500;color:#14532d;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:4px;padding:1px 6px;margin-top:4px;}
+.fixed-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:500;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:1px 6px;margin-top:4px;}
 
-/* LEVER GRID */
+/* SUMMARY CALLOUT */
+.summary-callout{background:var(--ink);color:var(--paper);border-radius:10px;padding:16px 20px;margin-bottom:14px;}
+.sum-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;opacity:.6;margin-bottom:6px;}
+.sum-text{font-size:13.5px;line-height:1.6;}
+.sum-text strong{font-weight:600;}
+
+/* LEVERS */
 .lever-grid{display:grid;grid-template-columns:1fr 1fr;}
 .lever{padding:18px 20px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);}
 .lever:nth-child(2n){border-right:none;}
 .lever:nth-last-child(-n+2){border-bottom:none;}
-.lever-5{padding:18px 20px;border-top:1px solid var(--rule);}
+.lever-full{padding:18px 20px;border-top:1px solid var(--rule);}
 .lv-num{font-size:11px;color:var(--ink-6);font-family:var(--mono);}
 .lv-name{font-size:14px;font-weight:500;margin-top:2px;}
 .lv-tag{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);background:var(--paper-2);border:1px solid var(--rule);border-radius:999px;padding:2px 8px;}
@@ -126,17 +145,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .lv-calc-val{font-family:var(--mono);font-weight:500;color:var(--ink-3);}
 .lv-value{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink);margin-top:12px;}
 .lv-value-sub{font-size:11.5px;font-family:var(--mono);color:var(--ink-4);margin-top:4px;}
-.lv-proof{font-size:10.5px;color:var(--ink-5);margin-top:5px;line-height:1.45;font-style:italic;}
+.lv-proof{font-size:10.5px;color:var(--ink-5);margin-top:6px;line-height:1.45;font-style:italic;}
 .lv-gmv-note{font-size:10.5px;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:4px 8px;margin-top:8px;}
-
-/* CAPACITY CHART */
-.cap-chart-wrap{display:flex;gap:12px;align-items:flex-end;height:140px;padding:0 4px;}
-.cap-group{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;}
-.cap-bars{display:flex;gap:4px;align-items:flex-end;height:110px;width:100%;}
-.cap-bar{flex:1;border-radius:3px 3px 0 0;}
-.cap-before{background:var(--paper-3);border:1px solid var(--rule-s);}
-.cap-after{background:var(--ink);}
-.cap-label{font-size:10px;color:var(--ink-5);text-align:center;font-family:var(--mono);line-height:1.4;}
 
 /* YEAR ROW */
 .year-row{display:flex;justify-content:space-between;margin-top:14px;padding-top:14px;border-top:1px solid var(--rule);}
@@ -144,23 +154,16 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .ys-val{font-family:var(--serif);font-size:16px;font-weight:500;margin-top:3px;}
 .ys-val.neg{color:var(--ink-4);}
 
-/* SENSITIVITY */
-.sens-tbl{width:100%;border-collapse:collapse;}
-.sens-tbl th{text-align:left;font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-5);padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--card-tint);}
-.sens-tbl th.num,.sens-tbl td.num{text-align:right;font-family:var(--mono);font-size:12px;}
-.sens-tbl td{padding:10px 14px;border-bottom:1px solid var(--rule);font-size:12.5px;color:var(--ink-3);}
-.sens-tbl tr:last-child td{border-bottom:none;}
+/* EVIDENCE + SENSITIVITY TABLES */
+.ev-tbl,.sens-tbl{width:100%;border-collapse:collapse;}
+.ev-tbl th,.sens-tbl th{text-align:left;font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-5);padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--card-tint);}
+.ev-tbl th.num,.ev-tbl td.num,.sens-tbl th.num,.sens-tbl td.num{text-align:right;font-family:var(--mono);font-size:12px;}
+.ev-tbl td,.sens-tbl td{padding:10px 14px;border-bottom:1px solid var(--rule);font-size:12.5px;color:var(--ink-3);vertical-align:middle;}
+.ev-tbl tr:last-child td,.sens-tbl tr:last-child td{border-bottom:none;}
+.ev-tbl tr:hover td{background:var(--paper-2);}
 .sens-tbl tr.hl td{background:var(--paper-2);font-weight:500;color:var(--ink);}
 
-/* EVIDENCE TABLE */
-.ev-tbl{width:100%;border-collapse:collapse;}
-.ev-tbl th{text-align:left;font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-5);padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--card-tint);}
-.ev-tbl th.num,.ev-tbl td.num{text-align:right;font-family:var(--mono);font-size:12px;}
-.ev-tbl td{padding:10px 14px;border-bottom:1px solid var(--rule);font-size:12.5px;color:var(--ink-3);vertical-align:middle;}
-.ev-tbl tr:last-child td{border-bottom:none;}
-.ev-tbl tr:hover td{background:var(--paper-2);}
-
-/* BADGE */
+/* BADGES */
 .badge{display:inline-flex;align-items:center;height:20px;padding:0 8px;font-size:10.5px;font-weight:500;background:var(--paper-2);color:var(--ink-3);border-radius:999px;border:1px solid var(--rule);}
 .badge-solid{background:var(--ink);color:var(--paper);}
 .badge-up{background:#f0fdf4;color:#166534;border-color:#bbf7d0;}
@@ -172,7 +175,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .note-ey{font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-5);margin-bottom:8px;}
 .note-body{font-size:12.5px;color:var(--ink-3);line-height:1.65;}
 
-/* METHOD STEPS */
+/* METHOD */
 .method-step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule);}
 .method-step:last-child{border-bottom:none;}
 .method-num{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
@@ -184,6 +187,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .foot{padding:22px 28px;border-top:1px solid var(--rule);background:var(--card);display:flex;justify-content:space-between;align-items:center;}
 .foot-text{font-size:11px;color:var(--ink-5);line-height:1.6;}
 
+/* RESPONSIVE */
 @media(max-width:1100px){.sim-grid{grid-template-columns:1fr;}.hero{grid-template-columns:repeat(2,1fr);}.baf-strip{grid-template-columns:1fr;}.baf-arrow{display:none;}.baf-side.before{border-right:none;border-bottom:1px solid var(--rule);}}
 @media(max-width:640px){.hero{grid-template-columns:1fr;}.lever-grid{grid-template-columns:1fr;}.lever{border-right:none!important;}}
 @media print{.nav,.btn,.pill-row,.tab-bar,.hd-right{display:none!important;}.shell{padding-top:0;}}
@@ -197,7 +201,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   <span class="nav-sep"></span>
   <span class="nav-label">Impact Simulator · Digital Transformation</span>
   <div class="nav-right">
-    <span class="live-badge"><span class="live-dot"></span>Real data · PROGRESS.xlsx</span>
+    <span class="live-badge"><span class="live-dot"></span>Grounded in real LAAM data</span>
     <span style="font-size:11px;color:var(--ink-5);font-family:var(--mono);">TME 6201 · Group 2 · Spring 2026</span>
     <button class="btn btn-sm" onclick="window.print()">Export PDF</button>
   </div>
@@ -209,7 +213,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <div>
         <div class="eyebrow">Impact Simulation · LAAM Group (Pvt.) Ltd. · PRaaS Portal — Scenario C</div>
         <div class="page-title">From WhatsApp chaos to structured workflow — how much time does the portal free?</div>
-        <div class="page-sub">This simulator quantifies the operational impact of replacing LAAM's fragmented WhatsApp + Google Sheets pipeline with a custom PRaaS portal. The goal is not revenue extraction — LAAM charges brands and talents <strong>0% commission</strong>. PRaaS is a complementary service. The impact is measured in <strong>time saved, coordination eliminated, capacity unlocked, and brand GMV enabled</strong>. Every projection is grounded in real LAAM data: Aiman Murtaza's operator logs (18 hrs/campaign), Maliha Noor's mismatch interviews (33% rejection rate), and the March 2026 campaign results from PROGRESS.xlsx.</div>
+        <div class="page-sub">This simulator quantifies the operational impact of replacing LAAM's fragmented WhatsApp + Google Sheets pipeline with a custom PRaaS portal. LAAM charges brands and talents <strong>0% commission</strong> — PRaaS is a complementary service. Impact is measured in <strong>time saved, coordination eliminated, capacity unlocked, and brand GMV enabled</strong>. All baseline numbers are grounded in Aiman Murtaza's operator logs (18 hrs/campaign) and Maliha Noor's mismatch interview (33% rejection rate).</div>
       </div>
       <div class="hd-right">
         <div class="pill-row">
@@ -225,47 +229,74 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   <div class="tab-bar">
     <button class="tab on" onclick="showTab('sim')">Impact Simulator</button>
     <button class="tab" onclick="showTab('logic')">Projection Logic</button>
-    <button class="tab" onclick="showTab('evidence')">Real Campaign Data · March 2026</button>
-    <button class="tab" onclick="showTab('sensitivity')">Sensitivity Analysis</button>
+    <button class="tab" onclick="showTab('evidence')">Real Campaign Data</button>
+    <button class="tab" onclick="showTab('whatif')">What-If Analysis</button>
   </div>
 
-  <!-- ════════════════════════════════════════════
-       TAB 1: SIMULATOR
-  ════════════════════════════════════════════ -->
+  <!-- ════ TAB 1: SIMULATOR ════ -->
   <div id="tab-sim" class="page-bd">
 
     <!-- COMMISSION STRIP -->
     <div class="commission-strip">
       <span class="commission-badge">0% Commission Model</span>
-      <span>LAAM charges brands and talents <strong>zero commission</strong> on PRaaS campaigns. The portal is a complementary service — its value is measured in <strong>operator time saved, cycle speed, capacity unlocked, and brand GMV enabled</strong>, not in revenue extraction.</span>
+      <span>LAAM charges brands and talents <strong>zero commission</strong> on PRaaS campaigns. The portal is a complementary service — value is measured in <strong>operator time saved, cycle speed, capacity unlocked, and brand GMV enabled</strong>, not revenue extraction.</span>
     </div>
 
-    <!-- BEFORE / AFTER BANNER -->
+    <!-- PROCESS MAP -->
+    <div class="proc-strip">
+      <div class="proc-label">7-Stage PRaaS Pipeline — Current State vs Portal</div>
+      <div class="proc-row" style="margin-bottom:8px;">
+        <div class="proc-row-label" style="color:#991b1b;font-size:9.5px;">WITHOUT PORTAL</div>
+        <div class="proc-stages-wrap">
+          <div class="proc-stage"><div class="proc-box bad">New Brief<br><span style="opacity:.7">WhatsApp/verbal</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box bad">Outreach<br><span style="opacity:.7">Google Form</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box bad">Negotiate<br><span style="opacity:.7">Sheets + calls</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box bad">Brief Locked<br><span style="opacity:.7">WhatsApp</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box bad">Payment<br><span style="opacity:.7">WA screenshot</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box bad">Content<br><span style="opacity:.7">Manual check</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box bad">Go Live<br><span style="opacity:.7">0% ROI data</span></div></div>
+        </div>
+      </div>
+      <div class="proc-row">
+        <div class="proc-row-label" style="color:#166534;font-size:9.5px;">WITH PORTAL</div>
+        <div class="proc-stages-wrap">
+          <div class="proc-stage"><div class="proc-box good">New Brief<br><span style="opacity:.7">Structured form</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box good">Outreach<br><span style="opacity:.7">Auto-matched</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box good">Negotiate<br><span style="opacity:.7">In-portal chat</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box good">Brief Locked<br><span style="opacity:.7">Budget firewall</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box good">Payment<br><span style="opacity:.7">Escrow wallet</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box good">Content<br><span style="opacity:.7">Auto-watermark</span></div><div class="proc-arrow">→</div></div>
+          <div class="proc-stage"><div class="proc-box good">Go Live<br><span style="opacity:.7">GMV dashboard</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEFORE / AFTER -->
     <div class="baf-strip">
       <div class="baf-side before">
-        <div class="baf-label b">⬛ Without Portal — Current State (WhatsApp + Sheets)</div>
-        <div class="baf-row"><span class="baf-metric">Coordination hrs per campaign</span><span class="baf-val bad">15–20 hrs</span></div>
-        <div class="baf-row"><span class="baf-metric">Brief → go-live cycle time</span><span class="baf-val bad">~21 days</span></div>
+        <div class="baf-label b">⬛ Without Portal — Current State</div>
+        <div class="baf-row"><span class="baf-metric">Coordination hrs / campaign</span><span class="baf-val bad">15–20 hrs</span></div>
+        <div class="baf-row"><span class="baf-metric">Brief → go-live cycle</span><span class="baf-val bad">~21 days</span></div>
         <div class="baf-row"><span class="baf-metric">Budget-talent mismatch rate</span><span class="baf-val bad">33%</span></div>
         <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val bad">3–7 days</span></div>
         <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val bad">6 of 32 aligned</span></div>
-        <div class="baf-row"><span class="baf-metric">Campaigns with any ROI data</span><span class="baf-val bad">0%</span></div>
+        <div class="baf-row"><span class="baf-metric">Post-campaign GMV data captured</span><span class="baf-val bad">0%</span></div>
         <div class="baf-source">Source: Aiman Murtaza operator logs · Maliha Noor interview · Apr 2026</div>
       </div>
       <div class="baf-arrow">→</div>
       <div class="baf-side after">
         <div class="baf-label a">✦ With Portal — Projected State (Scenario C)</div>
-        <div class="baf-row"><span class="baf-metric">Coordination hrs per campaign</span><span class="baf-val good" id="b-hours">6 hrs</span></div>
-        <div class="baf-row"><span class="baf-metric">Brief → go-live cycle time</span><span class="baf-val good" id="b-cycle">9.8 days</span></div>
+        <div class="baf-row"><span class="baf-metric">Coordination hrs / campaign</span><span class="baf-val good" id="b-hours">6 hrs</span></div>
+        <div class="baf-row"><span class="baf-metric">Brief → go-live cycle</span><span class="baf-val good" id="b-cycle">9.8 days</span></div>
         <div class="baf-row"><span class="baf-metric">Budget-talent mismatch rate</span><span class="baf-val good" id="b-mismatch">8%</span></div>
-        <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val good" id="b-payment">&lt;24 hrs</span></div>
+        <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val good">&lt;24 hrs (fixed target)</span></div>
         <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val good" id="b-brands">18 of 32</span></div>
-        <div class="baf-row"><span class="baf-metric">Campaigns with GMV dashboard</span><span class="baf-val good">100%</span></div>
+        <div class="baf-row"><span class="baf-metric">Post-campaign GMV data captured</span><span class="baf-val good">100%</span></div>
         <div class="baf-source">Source: Step 7 Scenario C targets · Step 8 Action Plan · Tech Design doc</div>
       </div>
     </div>
 
-    <!-- HERO KPIs — time/productivity based -->
+    <!-- HERO KPIs -->
     <div class="hero">
       <div class="hero-cell">
         <div class="h-ey">Coordination hours freed / yr</div>
@@ -275,7 +306,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <div class="hero-cell">
         <div class="h-ey">Cycle time compressed</div>
         <div class="h-val" id="h-cycle">—</div>
-        <div class="h-sub">Brief-to-go-live · 21 days → target</div>
+        <div class="h-sub" id="h-cycle-sub">Brief-to-go-live · 21 days → target</div>
       </div>
       <div class="hero-cell">
         <div class="h-ey">Rework hours avoided / yr</div>
@@ -292,12 +323,12 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     <!-- MAIN GRID -->
     <div class="sim-grid">
 
-      <!-- LEFT: INPUTS -->
+      <!-- LEFT: INPUTS (8 sliders) -->
       <div class="card">
         <div class="card-hd">
           <div>
             <div class="card-title">Adjust inputs</div>
-            <div class="card-sub">All defaults from real LAAM data · green tags show source</div>
+            <div class="card-sub">8 sliders · blue = fixed from real data · green = data source</div>
           </div>
           <span class="badge badge-solid" id="sc-badge">Base case</span>
         </div>
@@ -307,7 +338,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Portal adoption</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of the 32 brands that confirmed PRaaS interest in the live brand portfolio</div></div>
+              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of 32 brands that confirmed PRaaS interest in the live portfolio</div></div>
               <div class="field-val" id="lv-brands">22</div>
             </div>
             <div class="track"><div class="fill" id="f-brands"></div></div>
@@ -318,118 +349,59 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 
           <div class="divider"></div>
 
-          <!-- COORDINATION -->
-          <div class="sec-ey">Coordination hours — current vs target</div>
+          <!-- TIME SAVINGS -->
+          <div class="sec-ey">Time savings targets</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Coordination hrs today (per campaign)</div><div class="field-hint">WhatsApp group mgmt, calls with brands, back-and-forth, Excel updates, chasing</div></div>
-              <div class="field-val" id="lv-hr-b">18 hrs</div>
-            </div>
-            <div class="track"><div class="fill" id="f-hr-b"></div></div>
-            <input type="range" id="s-hr-b" min="6" max="40" step="1" value="18" oninput="update()">
-            <div class="range-labels"><span>6 hrs</span><span>40 hrs</span></div>
-            <div class="data-tag">📊 Aiman Murtaza operator log: ~18 hrs per campaign</div>
-          </div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">Coordination hrs with portal (per campaign)</div><div class="field-hint">Structured form intake, automated brief, in-portal approval — replaces all WA groups</div></div>
+              <div><div class="field-label">Coordination hrs with portal / campaign</div><div class="field-hint">Portal replaces all WhatsApp back-and-forth with structured intake + auto-notifications</div></div>
               <div class="field-val" id="lv-hr-a">6 hrs</div>
             </div>
             <div class="track"><div class="fill" id="f-hr-a"></div></div>
             <input type="range" id="s-hr-a" min="2" max="14" step="1" value="6" oninput="update()">
             <div class="range-labels"><span>2 hrs</span><span>14 hrs</span></div>
-            <div class="data-tag">📋 Step 8 Action Plan: 6–8 hr structured workflow target</div>
+            <div class="fixed-tag">🔒 Baseline fixed: 18 hrs/campaign (Aiman Murtaza log)</div>
+          </div>
+          <div class="field">
+            <div class="field-row">
+              <div><div class="field-label">Cycle compression</div><div class="field-hint">How much faster is brief → go-live with the portal? (baseline: 21 days)</div></div>
+              <div class="field-val" id="lv-compr">53%</div>
+            </div>
+            <div class="track"><div class="fill" id="f-compr"></div></div>
+            <input type="range" id="s-compr" min="15" max="72" step="1" value="53" oninput="update()">
+            <div class="range-labels"><span>15% faster</span><span>72% faster</span></div>
+            <div class="data-tag">📋 Step 8 target: 21 → 9.8 days = 53% compression</div>
+            <div style="font-size:10px;color:var(--ink-5);font-family:var(--mono);margin-top:4px;">21 days → <span id="lv-cy-derived">9.9</span> days with portal</div>
           </div>
 
           <div class="divider"></div>
 
           <!-- MISMATCH -->
-          <div class="sec-ey">Budget-talent mismatch rate</div>
+          <div class="sec-ey">Mismatch quality target</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Mismatch rate today</div><div class="field-hint">Campaigns rejected or reworked due to budget/talent mismatch — wastes coordinator time</div></div>
-              <div class="field-val" id="lv-mm-b">33%</div>
-            </div>
-            <div class="track"><div class="fill" id="f-mm-b"></div></div>
-            <input type="range" id="s-mm-b" min="10" max="60" step="1" value="33" oninput="update()">
-            <div class="range-labels"><span>10%</span><span>60%</span></div>
-            <div class="data-tag">📊 Maliha Noor interview: 3 of 9 campaigns = 33% mismatch</div>
-          </div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">Mismatch rate with portal</div><div class="field-hint">Budget firewall catches mismatches at submission — before any time is spent on outreach</div></div>
+              <div><div class="field-label">Mismatch rate with portal</div><div class="field-hint">Budget firewall catches wrong-tier talent at submission — before any outreach time is spent</div></div>
               <div class="field-val" id="lv-mm-a">8%</div>
             </div>
             <div class="track"><div class="fill" id="f-mm-a"></div></div>
             <input type="range" id="s-mm-a" min="1" max="20" step="0.5" value="8" oninput="update()">
             <div class="range-labels"><span>1%</span><span>20%</span></div>
-            <div class="data-tag">📋 Step 7 Scenario C target: &lt;8% mismatch rate</div>
+            <div class="fixed-tag">🔒 Baseline fixed: 33% mismatch rate (Maliha Noor interview)</div>
           </div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Rework hours per mismatch</div><div class="field-hint">Time wasted per failed campaign: brief rewrite, new talent outreach, re-negotiation</div></div>
+              <div><div class="field-label">Rework hours per mismatch event</div><div class="field-hint">Time wasted per failed campaign: brief rewrite, re-outreach, re-scheduling</div></div>
               <div class="field-val" id="lv-rework">8 hrs</div>
             </div>
             <div class="track"><div class="fill" id="f-rework"></div></div>
             <input type="range" id="s-rework" min="2" max="20" step="1" value="8" oninput="update()">
             <div class="range-labels"><span>2 hrs</span><span>20 hrs</span></div>
-            <div class="data-tag">📊 Est: brief rewrite + re-outreach + delay = ~8 hrs per mismatch</div>
+            <div class="data-tag">📊 Est: brief rewrite + re-outreach + delay ≈ 8 hrs per mismatch</div>
           </div>
 
           <div class="divider"></div>
 
-          <!-- CYCLE TIME -->
-          <div class="sec-ey">Cycle time — brief to go-live</div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">Cycle time today (days)</div><div class="field-hint">From brief submission to content going live — no formal tracking currently exists</div></div>
-              <div class="field-val" id="lv-cy-b">21 days</div>
-            </div>
-            <div class="track"><div class="fill" id="f-cy-b"></div></div>
-            <input type="range" id="s-cy-b" min="10" max="45" step="1" value="21" oninput="update()">
-            <div class="range-labels"><span>10 days</span><span>45 days</span></div>
-            <div class="data-tag">📊 Aiman interview: ~21-day median, no formal SLA</div>
-          </div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">Cycle time with portal (days)</div><div class="field-hint">Structured workflow: brief → match → approve → pay → live · all in one system</div></div>
-              <div class="field-val" id="lv-cy-a">9.8 days</div>
-            </div>
-            <div class="track"><div class="fill" id="f-cy-a"></div></div>
-            <input type="range" id="s-cy-a" min="4" max="18" step="0.5" value="9.8" oninput="update()">
-            <div class="range-labels"><span>4 days</span><span>18 days</span></div>
-            <div class="data-tag">📋 Step 8 Action Plan: ≤10-day target; simulator default 9.8</div>
-          </div>
-
-          <div class="divider"></div>
-
-          <!-- PAYMENT SPEED -->
-          <div class="sec-ey">Payment release speed</div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">Payment delay today (days)</div><div class="field-hint">Bank transfer via WhatsApp screenshot · disputed, manual, cascades to go-live delay</div></div>
-              <div class="field-val" id="lv-pay-b">5 days</div>
-            </div>
-            <div class="track"><div class="fill" id="f-pay-b"></div></div>
-            <input type="range" id="s-pay-b" min="3" max="14" step="1" value="5" oninput="update()">
-            <div class="range-labels"><span>3 days</span><span>14 days</span></div>
-            <div class="data-tag">📊 Aiman interview: 3–7 days delay; base uses midpoint 5 days</div>
-          </div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">Payment release with portal (days)</div><div class="field-hint">Escrow wallet: proof uploaded in portal, auto-released on content approval</div></div>
-              <div class="field-val" id="lv-pay-a">1 day</div>
-            </div>
-            <div class="track"><div class="fill" id="f-pay-a"></div></div>
-            <input type="range" id="s-pay-a" min="0.5" max="3" step="0.5" value="1" oninput="update()">
-            <div class="range-labels"><span>0.5 days</span><span>3 days</span></div>
-            <div class="data-tag">📋 Step 7 target: &lt;24 hrs (1 day) payment release</div>
-          </div>
-
-          <div class="divider"></div>
-
-          <!-- CAMPAIGNS / GMV -->
-          <div class="sec-ey">Campaign volume &amp; brand GMV context</div>
+          <!-- CAMPAIGN VOLUME & GMV -->
+          <div class="sec-ey">Campaign volume &amp; brand GMV</div>
           <div class="field">
             <div class="field-row">
               <div><div class="field-label">Active campaigns / month (today)</div><div class="field-hint">25 WhatsApp groups at peak = 25 concurrent campaigns running in parallel</div></div>
@@ -442,23 +414,23 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           </div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Avg brand campaign GMV (PKR)</div><div class="field-hint">Brand's sales GMV per campaign · LAAM takes 0% · value flows entirely to brand</div></div>
-              <div class="field-val" id="lv-gmv-inc">PKR 1.2M</div>
-            </div>
-            <div class="track"><div class="fill" id="f-gmv-inc"></div></div>
-            <input type="range" id="s-gmv-inc" min="200000" max="5000000" step="100000" value="1200000" oninput="update()">
-            <div class="range-labels"><span>PKR 200K</span><span>PKR 5M</span></div>
-            <div class="data-tag">📊 Bareen × Hira Faisal: PKR 2.64M incremental · base uses conservative PKR 1.2M</div>
-          </div>
-          <div class="field">
-            <div class="field-row">
-              <div><div class="field-label">% of campaigns achieving meaningful GMV uplift</div><div class="field-hint">Well-executed campaigns with right talent, brief, and timing — not every campaign qualifies</div></div>
+              <div><div class="field-label">% of campaigns achieving GMV uplift</div><div class="field-hint">Well-executed campaigns with right talent, brief, and timing — not every campaign qualifies</div></div>
               <div class="field-val" id="lv-uplift-pct">45%</div>
             </div>
             <div class="track"><div class="fill" id="f-uplift-pct"></div></div>
             <input type="range" id="s-uplift-pct" min="10" max="80" step="5" value="45" oninput="update()">
             <div class="range-labels"><span>10%</span><span>80%</span></div>
-            <div class="data-tag">📊 Real data: 2 of 4 tracked campaigns positive = 50% hit rate</div>
+            <div class="data-tag">📊 Real data: 2 of 4 tracked campaigns positive ≈ 50% hit rate</div>
+          </div>
+          <div class="field">
+            <div class="field-row">
+              <div><div class="field-label">Avg incremental brand GMV / campaign (PKR)</div><div class="field-hint">Brand's incremental sales from a well-executed campaign · LAAM takes 0%</div></div>
+              <div class="field-val" id="lv-gmv-inc">PKR 1.2M</div>
+            </div>
+            <div class="track"><div class="fill" id="f-gmv-inc"></div></div>
+            <input type="range" id="s-gmv-inc" min="200000" max="5000000" step="100000" value="1200000" oninput="update()">
+            <div class="range-labels"><span>PKR 200K</span><span>PKR 5M</span></div>
+            <div class="data-tag">📊 Bareen × Hira Faisal: PKR 2.64M · base uses conservative PKR 1.2M</div>
           </div>
 
         </div>
@@ -467,18 +439,24 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <!-- RIGHT: OUTPUTS -->
       <div style="display:flex;flex-direction:column;gap:14px;">
 
+        <!-- SUMMARY CALLOUT -->
+        <div class="summary-callout" id="summary-callout">
+          <div class="sum-label">Bottom line · base case</div>
+          <div class="sum-text" id="sum-text">The portal frees <strong id="sum-hrs">—</strong> of operator coordination time per year, enables <strong id="sum-brands">—</strong> brands per campaign cycle vs 6 today, and cuts the brief-to-go-live cycle by <strong id="sum-cycle">—</strong> — from 21 days to <strong id="sum-cy-days">—</strong>.</div>
+        </div>
+
         <!-- FIVE LEVERS -->
         <div class="card">
           <div class="card-hd">
             <div>
               <div class="card-title">The five impact levers</div>
-              <div class="card-sub">Time &amp; productivity impact · update inputs to see live changes · 0% commission model</div>
+              <div class="card-sub">Time &amp; productivity · live with sliders · 0% commission model</div>
             </div>
             <span class="badge badge-solid" id="sc-badge-2">Base case</span>
           </div>
           <div class="lever-grid">
 
-            <!-- LEVER 1: COORDINATION -->
+            <!-- LEVER 1 -->
             <div class="lever">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;">
                 <div><div class="lv-num">01</div><div class="lv-name">Coordination hours reclaimed</div></div>
@@ -490,10 +468,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Productivity gain per campaign</span><span class="lv-calc-val" id="l1-prod-pct">—</span></div>
               <div class="lv-value" id="l1-v">—</div>
               <div class="lv-value-sub" id="l1-pct">—</div>
-              <div class="lv-proof">Structured form intake + Kanban board + auto-notifications replaces 25+ WhatsApp groups entirely</div>
+              <div class="lv-proof">Structured form intake + Kanban board + auto-notifications replaces 25+ WhatsApp groups</div>
             </div>
 
-            <!-- LEVER 2: MISMATCH TIME -->
+            <!-- LEVER 2 -->
             <div class="lever">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;">
                 <div><div class="lv-num">02</div><div class="lv-name">Mismatch time eliminated</div></div>
@@ -505,10 +483,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Rejection rate drop</span><span class="lv-calc-val" id="l2-rate-drop">—</span></div>
               <div class="lv-value" id="l2-v">—</div>
               <div class="lv-value-sub" id="l2-pct">—</div>
-              <div class="lv-proof">Budget firewall at intake catches wrong-tier talent before brief is written — zero rework cost incurred</div>
+              <div class="lv-proof">Budget firewall at intake catches wrong-tier talent before any outreach time is spent</div>
             </div>
 
-            <!-- LEVER 3: CYCLE / CAPACITY -->
+            <!-- LEVER 3 -->
             <div class="lever">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;">
                 <div><div class="lv-num">03</div><div class="lv-name">Campaign capacity unlocked</div></div>
@@ -520,54 +498,51 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Additional campaigns vs today</span><span class="lv-calc-val" id="l3-additional">—</span></div>
               <div class="lv-value" id="l3-v">—</div>
               <div class="lv-value-sub" id="l3-brands">—</div>
-              <div class="lv-proof">Peak Season 2026: 32 brands aligned, only 6 executed. PKR 38.75M in brand budgets went unserved — not demand failure, but coordination ceiling</div>
+              <div class="lv-proof">32 brands aligned, only 6 executed in Peak Season 2026. PKR 38.75M in budgets went unserved — coordination ceiling, not demand</div>
             </div>
 
-            <!-- LEVER 4: PAYMENT SPEED -->
+            <!-- LEVER 4 -->
             <div class="lever">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;">
                 <div><div class="lv-num">04</div><div class="lv-name">Payment speed gained</div></div>
                 <span class="lv-tag">Treasury</span>
               </div>
               <div class="lv-formula" id="l4-formula">—</div>
-              <div class="lv-calc"><span class="lv-calc-label">Days saved per campaign</span><span class="lv-calc-val" id="l4-days-saved">—</span></div>
+              <div class="lv-calc"><span class="lv-calc-label">Days saved per campaign</span><span class="lv-calc-val">4 days (5 → 1)</span></div>
               <div class="lv-calc"><span class="lv-calc-label">Campaigns / year (portal)</span><span class="lv-calc-val" id="l4-camps">—</span></div>
-              <div class="lv-calc"><span class="lv-calc-label">Payment speed improvement</span><span class="lv-calc-val" id="l4-speed-pct">—</span></div>
+              <div class="lv-calc"><span class="lv-calc-label">Payment speed improvement</span><span class="lv-calc-val">80% faster (fixed target)</span></div>
               <div class="lv-value" id="l4-v">—</div>
               <div class="lv-value-sub" id="l4-sub">—</div>
-              <div class="lv-proof">Escrow wallet + WHT disclosed at intake eliminates the payment dispute chain that currently cascades into go-live delays</div>
+              <div class="lv-proof">Escrow wallet + WHT disclosed at intake eliminates payment dispute chain. Target: &lt;24 hrs release (fixed per Step 7)</div>
             </div>
 
           </div>
 
-          <!-- LEVER 5: GMV (full width) -->
-          <div class="lever-5">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-              <div style="display:flex;gap:14px;align-items:flex-start;">
-                <div><div class="lv-num">05</div><div class="lv-name">Brand GMV uplift enabled</div></div>
-              </div>
+          <!-- LEVER 5 — full width, single row -->
+          <div class="lever-full">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+              <div><div class="lv-num">05</div><div class="lv-name">Brand GMV uplift enabled</div></div>
               <div style="display:flex;gap:8px;align-items:center;">
                 <span class="lv-tag">Brand Value</span>
                 <span class="badge badge-blue">0% LAAM commission</span>
               </div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;align-items:start;">
               <div>
                 <div class="lv-formula" id="l5-formula">—</div>
+                <div class="lv-proof" style="margin-top:6px;">Proof: Bareen × Hira Faisal +141% GMV (PKR 1.87M → PKR 4.51M) · Urge Pret × Sajal Aly +652% (PKR 2.76M → PKR 20.73M) · March 2026</div>
               </div>
               <div>
                 <div class="lv-calc"><span class="lv-calc-label">Campaigns with uplift / yr</span><span class="lv-calc-val" id="l5-uplift-n">—</span></div>
-                <div class="lv-calc"><span class="lv-calc-label">Avg incremental GMV / campaign</span><span class="lv-calc-val" id="l5-gmv-inc">—</span></div>
+                <div class="lv-calc"><span class="lv-calc-label">Avg incremental GMV</span><span class="lv-calc-val" id="l5-gmv-inc">—</span></div>
                 <div class="lv-calc"><span class="lv-calc-label">LAAM take rate</span><span class="lv-calc-val" style="color:#1d4ed8;">0%</span></div>
               </div>
               <div>
                 <div class="lv-value" id="l5-v">—</div>
-                <div class="lv-gmv-note">This GMV flows entirely to brands. LAAM's return is brand loyalty, platform stickiness, and repeat engagement — not a percentage cut.</div>
+                <div class="lv-gmv-note">GMV flows entirely to brands. LAAM's return is brand loyalty and platform stickiness — not a percentage cut.</div>
               </div>
             </div>
-            <div class="lv-proof" style="margin-top:8px;">Proof: Bareen × Hira Faisal +141% GMV (PKR 1.87M → PKR 4.51M) · Urge Pret × Sajal Aly +652% GMV (PKR 2.76M → PKR 20.73M) · March 2026</div>
           </div>
-
         </div>
 
         <!-- CAPACITY CHART -->
@@ -575,12 +550,12 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="card-hd">
             <div>
               <div class="card-title">Brands served per campaign cycle — before vs after</div>
-              <div class="card-sub">Same operator, same team — fewer hours per brand = more brands served per cycle</div>
+              <div class="card-sub">Same operator, same hours — fewer hrs per brand = more brands served per cycle</div>
             </div>
             <span class="badge" id="chart-sc">Base case</span>
           </div>
           <div class="card-bd">
-            <svg id="cap-chart" viewBox="0 0 700 220" style="width:100%;height:auto;display:block;"></svg>
+            <svg id="cap-chart" viewBox="0 0 700 200" style="width:100%;height:auto;display:block;"></svg>
             <div class="year-row">
               <div><div class="ys-label">Today (current state)</div><div class="ys-val neg">6 brands</div></div>
               <div><div class="ys-label">With portal (Y1)</div><div class="ys-val" id="y1-brands">—</div></div>
@@ -603,103 +578,85 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════
-       TAB 2: PROJECTION LOGIC
-  ════════════════════════════════════════════ -->
+  <!-- ════ TAB 2: PROJECTION LOGIC ════ -->
   <div id="tab-logic" class="page-bd" style="display:none;">
-
     <div class="card" style="margin-bottom:14px;">
       <div class="card-hd">
         <div class="card-title">How every number is calculated</div>
-        <div class="card-sub">Full methodology — every formula, every assumption, every data source</div>
+        <div class="card-sub">Every formula, every assumption, every data source — full methodology</div>
       </div>
       <div class="card-bd">
-
         <div style="margin-bottom:16px;">
-          <div class="note-ey">The core logic of this simulation</div>
-          <div class="note-body">LAAM's PRaaS portal does not generate value by extracting a commission — it charges <strong>0%</strong>. The value is in <strong>operational efficiency</strong>: less time per campaign, fewer mismatches caught late, more brands served per season, faster payments, and better-executed campaigns generating more GMV for brands. Every lever below is calculated from time units, then translated into meaningful productivity gains. The data anchor is Aiman Murtaza's operator log (18 hrs/campaign) and Maliha Noor's mismatch interview (33% rejection).</div>
+          <div class="note-ey">Core logic</div>
+          <div class="note-body">LAAM's PRaaS portal charges <strong>0% commission</strong>. The value is in <strong>operational efficiency</strong>: less time per campaign, fewer mismatches caught late, more brands served per cycle, faster payments, and better-executed campaigns generating more GMV for brands. Every lever is calculated from time units. Baseline numbers are fixed from real interviews — only targets and adoption are adjustable.</div>
         </div>
-
         <div class="method-step">
           <div class="method-num">1</div>
           <div>
             <div class="method-title">Campaign capacity with portal</div>
-            <div class="method-body">Shorter cycle time means the same operator can run more campaigns without hitting a coordination ceiling. If the cycle compresses from 21 days to 9.8 days, capacity increases by 2.14×. We cap this at 1.8× to be conservative — the operator also needs buffer for quality reviews and new brand onboarding.</div>
-            <div class="method-formula">Capacity multiplier = min(cycle_days_before / cycle_days_after, 1.8)</div>
-            <div class="method-formula">Campaigns / yr (portal) = (campaigns / month × 12) × adoption% × capacity_multiplier</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base case: (25 × 12) × 70% × 1.8 = <strong>378 campaigns / year</strong> vs 300 today</div>
+            <div class="method-body">Faster cycle time = same operator can handle more campaigns. Cycle compression is set by the slider (default 53% = 21 days → 9.8 days). We cap the capacity multiplier at 1.8× to be conservative — the operator also needs buffer for quality reviews.</div>
+            <div class="method-formula">Cycle after = 21 × (1 − compression%) · Capacity mult = min(21 / cycle_after, 1.8)</div>
+            <div class="method-formula">Campaigns / yr (portal) = (campaigns / month × 12) × adoption% × capacity_mult</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (25 × 12) × 70% × 1.8 = <strong>378 campaigns / year</strong> vs 300 today</div>
           </div>
         </div>
-
         <div class="method-step">
           <div class="method-num">2</div>
           <div>
             <div class="method-title">Lever 01 — Coordination hours reclaimed</div>
-            <div class="method-body">Aiman Murtaza confirmed ~18 hours per campaign of coordination: managing WhatsApp groups (25+ at peak), updating Google Sheets manually, calling brands to re-confirm briefs, chasing payments, and tracking content approvals. The portal's structured intake form, Kanban board, and automated status notifications compress this to ~6 hours. No WhatsApp groups remain after Gate 3.</div>
-            <div class="method-formula">Hours freed / yr = (hrs_before − hrs_after) × campaigns_per_year</div>
-            <div class="method-formula">Productivity gain % = (hrs_before − hrs_after) / hrs_before × 100</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (18 − 6) × 378 = <strong>4,536 hours freed / year</strong> · <strong>67% productivity gain per campaign</strong></div>
+            <div class="method-body">Aiman Murtaza confirmed ~18 hrs/campaign: managing 25+ WhatsApp groups, updating Sheets manually, calling brands to re-confirm briefs, chasing payments. Portal's structured intake + Kanban board + auto-notifications compresses this to the slider value (default 6 hrs). Baseline of 18 hrs is fixed from the operator log.</div>
+            <div class="method-formula">Hours freed / yr = (18 − hrs_after) × campaigns_per_year</div>
+            <div class="method-formula">Productivity gain % = (18 − hrs_after) / 18 × 100</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (18 − 6) × 378 = <strong>4,536 hours freed / year · 67% productivity gain</strong></div>
           </div>
         </div>
-
         <div class="method-step">
           <div class="method-num">3</div>
           <div>
             <div class="method-title">Lever 02 — Mismatch time eliminated</div>
-            <div class="method-body">Maliha Noor confirmed 33% of campaigns hit a budget-talent mismatch — wrong tier, wrong brief, or budget insufficient for the talent requested — discovered only after hours of outreach. Currently this triggers a full rework cycle: brief rewrite, new talent search, re-negotiation, and re-scheduling. The portal's budget firewall catches this at the intake form, before any time is invested in outreach. We estimate each prevented mismatch saves ~8 hours of rework.</div>
-            <div class="method-formula">Mismatches prevented / yr = (campaigns_before × mismatch%_before) − (campaigns_after × mismatch%_after)</div>
-            <div class="method-formula">Rework hours avoided / yr = mismatches_prevented × rework_hrs_per_mismatch</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (300 × 33% − 378 × 8%) × 8 = (99 − 30) × 8 = <strong>552 rework hours avoided / year</strong></div>
+            <div class="method-body">Maliha Noor confirmed 33% of campaigns hit a budget-talent mismatch — discovered after hours of outreach. The portal's budget firewall catches this at the intake form before any time is invested in outreach. The 33% baseline is fixed; the target rate is the slider. Each prevented mismatch saves the rework hours set by the slider.</div>
+            <div class="method-formula">Prevented / yr = (campaigns_before × 33%) − (campaigns_after × mismatch%_after)</div>
+            <div class="method-formula">Rework hours avoided / yr = prevented × rework_hrs_per_mismatch</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (300 × 33% − 378 × 8%) × 8 = 69 × 8 = <strong>552 rework hours avoided / year</strong></div>
           </div>
         </div>
-
         <div class="method-step">
           <div class="method-num">4</div>
           <div>
             <div class="method-title">Lever 03 — Campaign capacity unlocked</div>
-            <div class="method-body">The capacity constraint is not talent availability — it is operator coordination overhead. Currently, 18 hrs/campaign × 6 brands/cycle = 108 operator-hours per campaign cycle. With the portal at 6 hrs/campaign, the same 108 hours serves 18 brands. This is not a projection — it is arithmetic. Peak Season 2026 data confirms the problem: 32 brands wanted PRaaS, only 6 were executed. PKR 38.75M in brand budgets went unserved because of coordination bottleneck, not demand.</div>
-            <div class="method-formula">Brands served / cycle = min(brands_onboarded, round(6 × hrs_before / hrs_after))</div>
-            <div class="method-formula">Additional brands = brands_after_cycle − 6 (current)</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: min(22, round(6 × 18 / 6)) = min(22, 18) = <strong>18 brands per cycle</strong> · <strong>+12 additional brands served</strong></div>
+            <div class="method-body">The constraint is not talent availability — it is operator coordination overhead. Currently, 18 hrs/campaign × 6 brands/cycle = 108 operator-hours. With the portal at 6 hrs/campaign, the same 108 hours serves 18 brands. Peak Season 2026 confirms this: 32 brands aligned, only 6 executed. PKR 38.75M in budgets went unserved because of a coordination ceiling.</div>
+            <div class="method-formula">Brands served / cycle = min(brands_onboarded, round(6 × 18 / hrs_after))</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: min(22, round(6 × 18 / 6)) = <strong>18 brands per cycle · +12 additional brands</strong></div>
           </div>
         </div>
-
         <div class="method-step">
           <div class="method-num">5</div>
           <div>
             <div class="method-title">Lever 04 — Payment speed gained</div>
-            <div class="method-body">Today, payment release takes 3–7 days per campaign because proof is shared via WhatsApp screenshot, manually verified, and subject to dispute about WHT (14% withholding tax, which brands frequently don't budget for, discovered mid-campaign). The portal's escrow wallet holds payment proof in-system, WHT is disclosed at the New Brief stage, and release is triggered automatically on content approval. Target: &lt;24 hours (1 day).</div>
-            <div class="method-formula">Payment days freed / campaign = pay_delay_before − pay_delay_after</div>
-            <div class="method-formula">Total campaign-days freed / yr = days_freed × campaigns_per_year</div>
-            <div class="method-formula">Payment speed improvement % = (pay_before − pay_after) / pay_before × 100</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (5 − 1) × 378 = <strong>1,512 campaign-days freed / year</strong> · <strong>80% faster payment release</strong></div>
+            <div class="method-body">Today: 3–7 day payment delay because proof is shared via WhatsApp screenshot and WHT (14% withholding tax) surprises brands mid-campaign. The portal's escrow wallet holds payment proof in-system, WHT is disclosed at New Brief stage, and release triggers automatically on content approval. Target: &lt;24 hours. This is fixed as a target per Step 7 — not a slider — because it is a binary system feature, not a gradual improvement.</div>
+            <div class="method-formula">Fixed assumption: 5 days before → 1 day after (80% faster) · campaign-days freed = 4 × campaigns/yr</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: 4 days × 378 campaigns = <strong>1,512 campaign-days freed / year</strong></div>
           </div>
         </div>
-
         <div class="method-step">
           <div class="method-num">6</div>
           <div>
             <div class="method-title">Lever 05 — Brand GMV uplift enabled (0% LAAM take)</div>
-            <div class="method-body">The portal enables better-executed campaigns — right talent, validated brief, right timing, no inventory mismatch. Better execution drives brand GMV uplift. LAAM takes 0% of this GMV. The value for LAAM is brand loyalty, portfolio retention, and platform stickiness, not revenue extraction. We use Bareen × Hira Faisal (+141%, PKR 2.64M incremental) as the conservative benchmark and apply it to the fraction of portal campaigns that achieve meaningful uplift.</div>
-            <div class="method-formula">Brand GMV enabled = campaigns_per_yr × uplift_hit_rate% × avg_incremental_GMV_per_campaign</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: 378 × 45% × PKR 1,200,000 = <strong>PKR 204M brand GMV enabled / year</strong> · LAAM take: PKR 0</div>
+            <div class="method-body">The portal enables better-executed campaigns — right talent, validated brief, right timing, no inventory mismatch. Better execution drives brand GMV uplift. LAAM takes 0% of this GMV; the value for LAAM is brand loyalty and platform retention. We use Bareen × Hira Faisal (+141%, PKR 2.64M incremental) as the conservative benchmark.</div>
+            <div class="method-formula">Brand GMV enabled = campaigns/yr × uplift_hit_rate% × avg_incremental_GMV</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: 378 × 45% × PKR 1,200,000 = <strong>PKR 204M brand GMV enabled / year · LAAM take: PKR 0</strong></div>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="note">
-      <div class="note-ey">Why we excluded Sajal Aly from the base case</div>
-      <div class="note-body">Urge Pret × Sajal Aly generated +652% GMV (PKR 2.76M → PKR 20.73M). This is a top-0.1% A-tier celebrity result that is not replicable across LAAM's 32-brand portfolio. Using it would inflate the GMV projection dishonestly. The base case uses PKR 1.2M incremental GMV — approximately 45% of what Bareen × Hira Faisal actually achieved (PKR 2.64M) — which is genuinely conservative. The simulator allows you to slide upward if you believe the portfolio can consistently match Bareen-level results.</div>
+      <div class="note-ey">Why Sajal Aly is excluded from the base case GMV figure</div>
+      <div class="note-body">Urge Pret × Sajal Aly generated +652% GMV (PKR 2.76M → PKR 20.73M). This is a top-0.1% A-tier celebrity result that cannot be replicated across LAAM's full 32-brand portfolio. Using it would inflate projections dishonestly. The base case uses PKR 1.2M incremental GMV — approximately 45% of what Bareen × Hira Faisal actually achieved (PKR 2.64M) — which is genuinely conservative.</div>
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════
-       TAB 3: REAL CAMPAIGN EVIDENCE
-  ════════════════════════════════════════════ -->
+  <!-- ════ TAB 3: CAMPAIGN DATA ════ -->
   <div id="tab-evidence" class="page-bd" style="display:none;">
-
     <div class="card" style="margin-bottom:14px;">
       <div class="card-hd">
         <div>
@@ -711,60 +668,55 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <table class="ev-tbl">
           <thead><tr>
             <th>Brand</th><th>Talent</th><th>Product</th>
-            <th class="num">GMV Before PR</th><th class="num">Units Before</th>
-            <th class="num">GMV After PR</th><th class="num">Units After</th>
+            <th class="num">GMV Before PR</th><th class="num">GMV After PR</th>
             <th class="num">Incremental GMV</th><th class="num">Uplift</th>
             <th>LAAM Commission</th><th>Used in model?</th>
           </tr></thead>
           <tbody>
             <tr>
-              <td><strong>Urge Pret</strong></td>
-              <td><strong>Sajal Aly</strong></td>
+              <td><strong>Urge Pret</strong></td><td><strong>Sajal Aly</strong></td>
               <td style="font-size:11px;color:var(--ink-5);">aneesa-1</td>
-              <td class="num">PKR 2,755,900</td><td class="num">310</td>
-              <td class="num" style="font-weight:600;">PKR 20,731,480</td><td class="num" style="font-weight:600;">2,439</td>
+              <td class="num">PKR 2,755,900</td>
+              <td class="num" style="font-weight:600;">PKR 20,731,480</td>
               <td class="num" style="color:#166534;font-weight:600;">+PKR 17,975,580</td>
               <td class="num"><span class="badge badge-up">+652%</span></td>
               <td><span class="badge badge-blue">0%</span></td>
               <td><span style="font-size:11px;color:var(--ink-5);">Proof only · excluded from base (A-tier outlier)</span></td>
             </tr>
             <tr style="background:var(--paper-2);">
-              <td><strong>Bareen</strong></td>
-              <td><strong>Hira Faisal</strong></td>
+              <td><strong>Bareen</strong></td><td><strong>Hira Faisal</strong></td>
               <td style="font-size:11px;color:var(--ink-5);">slp-04-blue-pink-3pc</td>
-              <td class="num">PKR 1,871,940</td><td class="num">352</td>
-              <td class="num" style="font-weight:600;">PKR 4,509,960</td><td class="num" style="font-weight:600;">826</td>
+              <td class="num">PKR 1,871,940</td>
+              <td class="num" style="font-weight:600;">PKR 4,509,960</td>
               <td class="num" style="color:#166534;font-weight:600;">+PKR 2,638,020</td>
               <td class="num"><span class="badge badge-up">+141%</span></td>
               <td><span class="badge badge-blue">0%</span></td>
               <td><span style="font-size:11px;color:#166534;font-weight:500;">✓ Conservative benchmark</span></td>
             </tr>
             <tr>
-              <td>Bareen</td>
-              <td>Kainat Faisal</td>
+              <td>Bareen</td><td>Kainat Faisal</td>
               <td style="font-size:11px;color:var(--ink-5);">kf-14a-kaftaan</td>
-              <td class="num">PKR 755,250</td><td class="num">159</td>
-              <td class="num">PKR 308,750</td><td class="num">65</td>
+              <td class="num">PKR 755,250</td>
+              <td class="num">PKR 308,750</td>
               <td class="num" style="color:#991b1b;">−PKR 446,500</td>
               <td class="num"><span class="badge badge-down">−59%</span></td>
               <td><span class="badge badge-blue">0%</span></td>
-              <td><span style="font-size:11px;color:var(--ink-5);">Excluded · seasonal decline · portal inventory gate would have blocked</span></td>
+              <td><span style="font-size:11px;color:var(--ink-5);">Excluded · seasonal decline · portal inventory gate would have blocked this</span></td>
             </tr>
             <tr>
-              <td>Bareen</td>
-              <td>Kainat Faisal</td>
+              <td>Bareen</td><td>Kainat Faisal</td>
               <td style="font-size:11px;color:var(--ink-5);">kf-14b-kaftaan</td>
-              <td class="num">PKR 821,750</td><td class="num">173</td>
-              <td class="num">PKR 71,250</td><td class="num">15</td>
+              <td class="num">PKR 821,750</td>
+              <td class="num">PKR 71,250</td>
               <td class="num" style="color:#991b1b;">−PKR 750,500</td>
               <td class="num"><span class="badge badge-down">−91%</span></td>
               <td><span class="badge badge-blue">0%</span></td>
               <td><span style="font-size:11px;color:var(--ink-5);">Excluded · inventory gate would have caught at submission</span></td>
             </tr>
             <tr style="background:var(--paper-2);font-weight:600;">
-              <td colspan="3"><strong>Total (all 4 tracked)</strong></td>
-              <td class="num">PKR 6,204,840</td><td class="num">994</td>
-              <td class="num">PKR 25,621,440</td><td class="num">3,345</td>
+              <td colspan="3"><strong>Total (all 4 tracked campaigns)</strong></td>
+              <td class="num">PKR 6,204,840</td>
+              <td class="num">PKR 25,621,440</td>
               <td class="num" style="color:#166534;">+PKR 19,416,600</td>
               <td class="num"><span class="badge badge-up">+313%</span></td>
               <td><span class="badge badge-blue">0%</span></td>
@@ -774,65 +726,55 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         </table>
       </div>
     </div>
-
-    <!-- OPERATIONAL PAIN DATA -->
     <div class="card" style="margin-bottom:14px;">
       <div class="card-hd">
-        <div class="card-title">Peak Season 2026 — The capacity bottleneck</div>
+        <div class="card-title">Peak Season 2026 — The capacity bottleneck in numbers</div>
         <div class="card-sub">32 brands aligned · only 6 executed · not a demand problem — a coordination ceiling</div>
       </div>
       <div style="overflow-x:auto;">
         <table class="ev-tbl">
-          <thead><tr>
-            <th>Metric</th><th>Current State (WhatsApp + Sheets)</th><th>Portal Target (Scenario C)</th><th>Change</th>
-          </tr></thead>
+          <thead><tr><th>Metric</th><th>Current State (WhatsApp + Sheets)</th><th>Portal Target (Scenario C)</th><th>Change</th></tr></thead>
           <tbody>
-            <tr><td>Brands requesting PRaaS</td><td>32 aligned (confirmed)</td><td>32 (same)</td><td><span class="badge">No change</span></td></tr>
-            <tr style="background:var(--paper-2);"><td>Brands actually served</td><td><strong>6</strong> (19% utilisation)</td><td><strong>≥18</strong> (≥56%)</td><td><span class="badge badge-up">3× capacity</span></td></tr>
-            <tr><td>Unserved brand budgets</td><td>PKR 38.75M (26 brands)</td><td>PKR 0 unserved</td><td><span class="badge badge-up">PKR 38.75M unlocked</span></td></tr>
-            <tr style="background:var(--paper-2);"><td>Coordination hrs / brand</td><td>15–20 hrs (Aiman log)</td><td>6–8 hrs (portal)</td><td><span class="badge badge-up">~67% reduction</span></td></tr>
+            <tr><td>Brands requesting PRaaS</td><td>32 aligned (confirmed)</td><td>32 (same demand)</td><td><span class="badge">No change</span></td></tr>
+            <tr style="background:var(--paper-2);"><td><strong>Brands actually served</strong></td><td><strong>6</strong> (19% of aligned)</td><td><strong>≥18</strong> (≥56%)</td><td><span class="badge badge-up">3× capacity</span></td></tr>
+            <tr><td>Unserved brand budgets</td><td>PKR 38.75M (26 brands)</td><td>Fully servable</td><td><span class="badge badge-up">PKR 38.75M unlocked</span></td></tr>
+            <tr style="background:var(--paper-2);"><td>Coordination hrs / campaign</td><td>15–20 hrs (Aiman log)</td><td>6–8 hrs (portal)</td><td><span class="badge badge-up">~67% reduction</span></td></tr>
             <tr><td>WhatsApp groups managed</td><td>25+ concurrently</td><td>0 (retired at Gate 3)</td><td><span class="badge badge-up">−25 groups</span></td></tr>
-            <tr style="background:var(--paper-2);"><td>Payment delay per campaign</td><td>3–7 days (WA transfer dispute)</td><td>&lt;24 hours (escrow)</td><td><span class="badge badge-up">~80% faster</span></td></tr>
-            <tr><td>Post-campaign GMV data</td><td>0% captured</td><td>100% via dashboard</td><td><span class="badge badge-up">+100%</span></td></tr>
+            <tr style="background:var(--paper-2);"><td>Payment delay per campaign</td><td>3–7 days (WA bank transfer)</td><td>&lt;24 hours (escrow)</td><td><span class="badge badge-up">~80% faster</span></td></tr>
+            <tr><td>Post-campaign GMV data</td><td>0% captured</td><td>100% via dashboard</td><td><span class="badge badge-up">Full visibility</span></td></tr>
             <tr style="background:var(--paper-2);"><td>Mismatch rejection rate</td><td>33% (Maliha interview)</td><td>&lt;8% (budget firewall)</td><td><span class="badge badge-up">−75% mismatches</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
-
     <div class="note">
       <div class="note-ey">Why the Kainat Faisal campaigns failed — and how the portal prevents this</div>
-      <div class="note-body">The two Kainat Faisal kaftaan campaigns declined −59% and −91% in March 2026. This is not a talent failure — kaftaan is a seasonal product that was already declining in February. The problem is that <strong>this campaign should never have been approved to go live in March</strong>. The portal's inventory gate (blocks go-live if stock is insufficient or declining) and brief validation layer (checks product seasonality trend before budget is committed) would have caught this at submission — saving the coordinator's time, the brand's brief-writing effort, and preventing a poor result from being attributed to the talent. This is exactly the coordination failure that Scenario C solves.</div>
+      <div class="note-body">The two Kainat Faisal kaftaan campaigns declined −59% and −91% in March 2026. Kaftaan is a seasonal product already declining in February. The problem: this campaign should never have been approved for March. The portal's inventory gate (blocks go-live if stock is declining) and brief validation layer (checks product seasonality at submission) would have caught this before any coordinator time was spent — preventing a poor result from being attributed to the talent.</div>
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════
-       TAB 4: SENSITIVITY ANALYSIS
-  ════════════════════════════════════════════ -->
-  <div id="tab-sensitivity" class="page-bd" style="display:none;">
-
+  <!-- ════ TAB 4: WHAT-IF ANALYSIS ════ -->
+  <div id="tab-whatif" class="page-bd" style="display:none;">
     <div class="card" style="margin-bottom:14px;">
       <div class="card-hd">
-        <div class="card-title">Full scenario sensitivity · time &amp; productivity metrics</div>
-        <div class="card-sub">Conservative / Base / Aggressive · holding your current slider values for campaign volume</div>
+        <div class="card-title">Scenario comparison — Conservative, Base, Aggressive</div>
+        <div class="card-sub">Holding your current campaign volume · varying adoption and efficiency targets</div>
       </div>
       <table class="sens-tbl">
         <thead><tr>
-          <th>Scenario</th><th>Adoption</th><th>Mismatch after</th><th>Cycle after</th><th>Hrs after</th>
-          <th class="num">Hrs freed / yr</th><th class="num">Rework hrs avoided</th><th class="num">Brands / cycle</th><th class="num">Pay speed gain</th><th class="num">Brand GMV enabled</th>
+          <th>Scenario</th><th>Adoption</th><th>Mismatch after</th><th>Cycle compression</th><th>Hrs after</th>
+          <th class="num">Hrs freed / yr</th><th class="num">Rework hrs avoided</th><th class="num">Brands / cycle</th><th class="num">Brand GMV enabled</th>
         </tr></thead>
         <tbody id="full-sens-body"></tbody>
       </table>
     </div>
-
     <div class="card">
       <div class="card-hd">
         <div class="card-title">What breaks the case? — single-variable stress tests</div>
-        <div class="card-sub">Holding all else at base case · testing where the model is most sensitive</div>
+        <div class="card-sub">Holding all else at base case · identifying where the model is most sensitive</div>
       </div>
       <div class="card-bd" id="stress-body"></div>
     </div>
-
   </div>
 
 </div><!-- shell -->
@@ -840,168 +782,137 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <div class="foot">
   <div class="foot-text">
     LAAM Group (Pvt.) Ltd. · PRaaS Impact Simulator · TME 6201 · LUMS Suleman Dawood School of Business · Spring 2026<br>
-    Data sources: PR_as_a_service.xlsx + PR_AS_A_SERVICE_-_PROGRESS.xlsx · Instructors: Dr. Ussama Yaqoob &amp; Mr. Badar Khushnood
+    Data: PR_as_a_service.xlsx + PR_AS_A_SERVICE_-_PROGRESS.xlsx · Instructors: Dr. Ussama Yaqoob &amp; Mr. Badar Khushnood
   </div>
   <span style="font-family:var(--serif);font-size:16px;color:var(--ink-4);">LAAM PRaaS</span>
 </div>
 
 <script>
-// ─── CONSTANTS ────────────────────────────────────────────────────────────────
-const TOTAL_BRANDS    = 32;   // aligned brands from live portfolio
-const BRANDS_CURRENT  = 6;    // brands actually served in peak season 2026
-const MAX_CAP_MULT    = 1.8;  // conservative cap on cycle compression benefit
-const LAAM_COMMISSION = 0;    // 0% — PRaaS is a complementary service
+// ─── CONSTANTS (fixed from real data — not adjustable) ──────────────────────
+const TOTAL_BRANDS   = 32;   // aligned brands in live portfolio
+const BRANDS_CURRENT = 6;    // brands served in peak season 2026
+const MAX_CAP_MULT   = 1.8;  // conservative cap on cycle compression benefit
+const HR_BEFORE      = 18;   // fixed: Aiman Murtaza operator log
+const MM_BEFORE      = 33;   // fixed: Maliha Noor interview (%)
+const PAY_BEFORE     = 5;    // fixed: 3–7 day midpoint (days)
+const PAY_AFTER      = 1;    // fixed: Step 7 target <24 hrs (days)
+const CYCLE_BEFORE   = 21;   // fixed: Aiman interview (days)
 
-// Scenario presets
+// ─── SCENARIO PRESETS ────────────────────────────────────────────────────────
 const SCENARIO_PRESETS = {
-  conservative: { brandsAdopt:0.50, mmAfter:15,  cycleAfter:13,  hrsAfter:8, payAfter:2,   upliftPct:30, gmvInc:800000  },
-  base:         { brandsAdopt:0.70, mmAfter:8,   cycleAfter:9.8, hrsAfter:6, payAfter:1,   upliftPct:45, gmvInc:1200000 },
-  aggressive:   { brandsAdopt:0.85, mmAfter:4,   cycleAfter:7,   hrsAfter:4, payAfter:0.5, upliftPct:60, gmvInc:1800000 },
+  conservative: { brandsAdopt:0.50, mmAfter:15,  hrsAfter:8, compr:38, upliftPct:30, gmvInc:800000  },
+  base:         { brandsAdopt:0.70, mmAfter:8,   hrsAfter:6, compr:53, upliftPct:45, gmvInc:1200000 },
+  aggressive:   { brandsAdopt:0.85, mmAfter:4,   hrsAfter:4, compr:67, upliftPct:60, gmvInc:1800000 },
 };
 
 const DEFAULTS = {
-  brands:22, cpm:25, hrB:18, hrA:6, mmB:33, mmA:8, reworkHrs:8,
-  cyB:21, cyA:9.8, payB:5, payA:1,
-  gmvInc:1200000, upliftPct:45,
-  scenario:'base',
+  brands:22, cpm:25, hrA:6, mmA:8, reworkHrs:8, compr:53, upliftPct:45, gmvInc:1200000, scenario:'base',
 };
 let st = {...DEFAULTS};
 
-// ─── FORMAT ───────────────────────────────────────────────────────────────────
-const fmtHrs = n => {
-  const r = Math.round(n);
-  if(r >= 1000) return (r/1000).toFixed(1) + 'K hrs';
-  return r + ' hrs';
-};
+// ─── FORMATTERS ──────────────────────────────────────────────────────────────
+const fmtHrs = n => { const r = Math.round(n); return r >= 1000 ? (r/1000).toFixed(1)+'K hrs' : r+' hrs'; };
 const fmtN   = n => Math.round(n).toLocaleString('en-PK');
-const fmtPct = n => n.toFixed(1) + '%';
+const fmtPct = n => n.toFixed(1)+'%';
 const fmtPKR = n => {
-  const abs = Math.abs(n);
-  const sign = n < 0 ? '−' : '';
-  if(abs >= 1e9) return sign + 'PKR ' + (abs/1e9).toFixed(1) + 'B';
-  if(abs >= 1e7) return sign + 'PKR ' + (abs/1e7).toFixed(1) + 'Cr';
-  if(abs >= 1e5) return sign + 'PKR ' + (abs/1e5).toFixed(1) + 'L';
-  if(abs >= 1e3) return sign + 'PKR ' + (abs/1e3).toFixed(0) + 'K';
-  return sign + 'PKR ' + Math.round(abs);
+  const abs = Math.abs(n), sign = n < 0 ? '−' : '';
+  if(abs >= 1e9) return sign+'PKR '+(abs/1e9).toFixed(1)+'B';
+  if(abs >= 1e7) return sign+'PKR '+(abs/1e7).toFixed(1)+'Cr';
+  if(abs >= 1e5) return sign+'PKR '+(abs/1e5).toFixed(1)+'L';
+  if(abs >= 1e3) return sign+'PKR '+(abs/1e3).toFixed(0)+'K';
+  return sign+'PKR '+Math.round(abs);
 };
 
-// ─── COMPUTE ENGINE ──────────────────────────────────────────────────────────
+// ─── COMPUTE ─────────────────────────────────────────────────────────────────
 function compute(p) {
-  const adopt     = p.brands / TOTAL_BRANDS;
-  const capMult   = Math.min(p.cyB / p.cyA, MAX_CAP_MULT);
-  const campYearB = p.cpm * 12;
-  const campYearA = campYearB * adopt * capMult;
+  const adopt      = p.brands / TOTAL_BRANDS;
+  const cyA        = CYCLE_BEFORE * (1 - p.compr / 100);
+  const capMult    = Math.min(CYCLE_BEFORE / cyA, MAX_CAP_MULT);
+  const campYearB  = p.cpm * 12;
+  const campYearA  = campYearB * adopt * capMult;
 
-  // Lever 1: Coordination hours reclaimed
-  const hrsSaved        = Math.max(p.hrB - p.hrA, 0);
-  const totalHrsSaved   = hrsSaved * campYearA;
-  const productivityPct = p.hrB > 0 ? (hrsSaved / p.hrB * 100) : 0;
+  // Lever 1: Coordination hours
+  const hrsSaved      = Math.max(HR_BEFORE - p.hrA, 0);
+  const totalHrsSaved = hrsSaved * campYearA;
+  const prodPct       = HR_BEFORE > 0 ? (hrsSaved / HR_BEFORE * 100) : 0;
 
-  // Lever 2: Mismatch time eliminated
-  const disputesB       = campYearB * (p.mmB / 100);
-  const disputesA       = campYearA * (p.mmA / 100);
-  const prevented       = Math.max(disputesB - disputesA, 0);
-  const reworkAvoided   = prevented * p.reworkHrs;
-  const mismatchDropPct = p.mmB > 0 ? ((p.mmB - p.mmA) / p.mmB * 100) : 0;
+  // Lever 2: Mismatch time
+  const disputesB     = campYearB * (MM_BEFORE / 100);
+  const disputesA     = campYearA * (p.mmA / 100);
+  const prevented     = Math.max(disputesB - disputesA, 0);
+  const reworkAvoided = prevented * p.reworkHrs;
+  const mmDropPct     = (MM_BEFORE - p.mmA) / MM_BEFORE * 100;
 
-  // Lever 3: Campaign capacity unlocked
-  const additionalCamps    = Math.max(campYearA - campYearB, 0);
-  const capacityGainPct    = campYearB > 0 ? (additionalCamps / campYearB * 100) : 0;
-  const brandsThisEid      = Math.min(p.brands, Math.round(BRANDS_CURRENT * p.hrB / Math.max(p.hrA, 1)));
-  const additionalBrands   = Math.max(brandsThisEid - BRANDS_CURRENT, 0);
+  // Lever 3: Capacity
+  const additionalCamps  = Math.max(campYearA - campYearB, 0);
+  const brandsCycle      = Math.min(p.brands, Math.round(BRANDS_CURRENT * HR_BEFORE / Math.max(p.hrA, 1)));
+  const additionalBrands = Math.max(brandsCycle - BRANDS_CURRENT, 0);
 
-  // Lever 4: Payment speed
-  const daysSaved          = Math.max(p.payB - p.payA, 0);
+  // Lever 4: Payment (fixed)
+  const daysSaved         = PAY_BEFORE - PAY_AFTER; // = 4
   const totalCampDaysFreed = daysSaved * campYearA;
-  const paySpeedPct        = p.payB > 0 ? (daysSaved / p.payB * 100) : 0;
+  const paySpeedPct       = (daysSaved / PAY_BEFORE * 100); // = 80%
 
-  // Lever 5: Brand GMV enabled (LAAM 0%)
+  // Lever 5: Brand GMV
   const campsWithUplift = campYearA * (p.upliftPct / 100);
   const totalBrandGMV   = campsWithUplift * p.gmvInc;
 
-  // Aggregate time freed (for hero KPI)
-  const totalTimeFreed = totalHrsSaved + reworkAvoided;
-
   return {
-    adopt, capMult, campYearB, campYearA,
-    hrsSaved, totalHrsSaved, productivityPct,
-    disputesB, disputesA, prevented, reworkAvoided, mismatchDropPct,
-    additionalCamps, capacityGainPct, brandsThisEid, additionalBrands,
+    adopt, capMult, campYearB, campYearA, cyA,
+    hrsSaved, totalHrsSaved, prodPct,
+    disputesB, disputesA, prevented, reworkAvoided, mmDropPct,
+    additionalCamps, brandsCycle, additionalBrands,
     daysSaved, totalCampDaysFreed, paySpeedPct,
     campsWithUplift, totalBrandGMV,
-    totalTimeFreed,
-    cycleDropPct: p.cyB > 0 ? ((p.cyB - p.cyA) / p.cyB * 100) : 0,
-    cycleDropDays: Math.max(p.cyB - p.cyA, 0),
+    cycleDropPct: p.compr,
   };
 }
 
-// ─── CAPACITY CHART ───────────────────────────────────────────────────────────
+// ─── CAPACITY CHART ──────────────────────────────────────────────────────────
 function drawCapChart(res) {
-  const y1b = res.brandsThisEid;
+  const y1b = res.brandsCycle;
   const y2b = Math.min(TOTAL_BRANDS, Math.round(y1b * 1.08));
   const y3b = Math.min(TOTAL_BRANDS, Math.round(y1b * 1.15));
   const maxB = Math.max(BRANDS_CURRENT, y1b, y2b, y3b, 1);
-  const W=700, H=220, PX=48, PY=20;
-
+  const W=700, H=200, PX=48, PY=20, bh=H-PY-36;
   const groups = [
-    {label:'Today', before: BRANDS_CURRENT, after: null},
-    {label:'Year 1\n(portal)', before: null, after: y1b},
-    {label:'Year 2\n(+8%)', before: null, after: y2b},
-    {label:'Year 3\n(+15%)', before: null, after: y3b},
+    {label:'Today', val:BRANDS_CURRENT, before:true},
+    {label:'Year 1 (portal)', val:y1b, before:false},
+    {label:'Year 2 (+8%)', val:y2b, before:false},
+    {label:'Year 3 (+15%)', val:y3b, before:false},
   ];
-
-  const gw = (W - PX - 20) / groups.length;
-  const bh = H - PY - 40;
-
+  const gw = (W-PX-20)/groups.length;
   let svg = '';
-  // Y axis labels
   [0, Math.round(maxB/2), maxB].forEach(v => {
-    const y = PY + bh * (1 - v/maxB);
+    const y = PY + bh*(1-v/maxB);
     svg += `<text x="${PX-6}" y="${y.toFixed(1)}" text-anchor="end" dominant-baseline="middle" font-size="10" fill="#8c8c8c" font-family="JetBrains Mono,monospace">${v}</text>`;
     svg += `<line x1="${PX}" x2="${W-16}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#e8e8e8"/>`;
   });
-
   groups.forEach((g, i) => {
-    const cx = PX + i * gw + gw / 2;
-    const barW = gw * 0.45;
-    const val = g.before !== null ? g.before : g.after;
-    const barH = bh * val / maxB;
-    const barX = cx - barW/2;
-    const barY = PY + bh - barH;
-    const fill = g.before !== null ? 'none' : '#000';
-    const stroke = g.before !== null ? '#c8c8c8' : 'none';
-    const strokeBg = g.before !== null ? '#eaeaea' : 'none';
-
-    svg += `<rect x="${barX.toFixed(1)}" y="${barY.toFixed(1)}" width="${barW.toFixed(1)}" height="${barH.toFixed(1)}" fill="${g.before!==null?'#eaeaea':'#000'}" stroke="${stroke}" rx="3"/>`;
-    svg += `<text x="${cx.toFixed(1)}" y="${(barY-6).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="600" fill="${g.before!==null?'#666':'#000'}" font-family="Inter,sans-serif">${val}</text>`;
-
-    const label = g.label.replace('\n', ' ');
-    svg += `<text x="${cx.toFixed(1)}" y="${(PY+bh+16).toFixed(1)}" text-anchor="middle" font-size="10" fill="#8c8c8c" font-family="JetBrains Mono,monospace">${label}</text>`;
+    const cx = PX + i*gw + gw/2;
+    const barW = gw * 0.5, barH = bh*g.val/maxB;
+    const barX = cx - barW/2, barY = PY+bh-barH;
+    svg += `<rect x="${barX.toFixed(1)}" y="${barY.toFixed(1)}" width="${barW.toFixed(1)}" height="${barH.toFixed(1)}" fill="${g.before?'#eaeaea':'#000'}" stroke="${g.before?'#c8c8c8':'none'}" rx="3"/>`;
+    svg += `<text x="${cx.toFixed(1)}" y="${(barY-5).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="600" fill="${g.before?'#666':'#000'}" font-family="Inter,sans-serif">${g.val}</text>`;
+    svg += `<text x="${cx.toFixed(1)}" y="${(PY+bh+14).toFixed(1)}" text-anchor="middle" font-size="10" fill="#8c8c8c" font-family="JetBrains Mono,monospace">${g.label}</text>`;
   });
-
-  // Legend
-  svg += `<rect x="${PX}" y="${H-8}" width="12" height="10" fill="#eaeaea" stroke="#c8c8c8" rx="2"/>`;
-  svg += `<text x="${PX+16}" y="${H-2}" font-size="9.5" fill="#8c8c8c" font-family="Inter,sans-serif">Without portal</text>`;
-  svg += `<rect x="${PX+100}" y="${H-8}" width="12" height="10" fill="#000" rx="2"/>`;
-  svg += `<text x="${PX+116}" y="${H-2}" font-size="9.5" fill="#8c8c8c" font-family="Inter,sans-serif">With portal</text>`;
-
+  svg += `<rect x="${PX}" y="${H-6}" width="10" height="8" fill="#eaeaea" stroke="#c8c8c8" rx="2"/><text x="${PX+14}" y="${H}" font-size="9.5" fill="#8c8c8c" font-family="Inter,sans-serif">Without portal</text>`;
+  svg += `<rect x="${PX+105}" y="${H-6}" width="10" height="8" fill="#000" rx="2"/><text x="${PX+119}" y="${H}" font-size="9.5" fill="#8c8c8c" font-family="Inter,sans-serif">With portal</text>`;
   document.getElementById('cap-chart').innerHTML = svg;
-
-  document.getElementById('y1-brands').textContent = y1b + ' brands';
-  document.getElementById('y2-brands').textContent = y2b + ' brands';
-  document.getElementById('y3-brands').textContent = y3b + ' brands';
+  document.getElementById('y1-brands').textContent = y1b+' brands';
+  document.getElementById('y2-brands').textContent = y2b+' brands';
+  document.getElementById('y3-brands').textContent = y3b+' brands';
 }
 
-// ─── BREAKDOWN BARS ───────────────────────────────────────────────────────────
+// ─── BREAKDOWN BARS ──────────────────────────────────────────────────────────
 function drawBreakdown(res) {
   const items = [
-    {label:'Coordination hours reclaimed', val:res.totalHrsSaved, unit:'hrs / yr', detail:`${res.hrsSaved} hrs/campaign × ${fmtN(res.campYearA)} portal campaigns`},
-    {label:'Mismatch rework hours avoided', val:res.reworkAvoided, unit:'hrs / yr', detail:`${fmtN(res.prevented)} mismatches prevented × ${st.reworkHrs} hrs rework each`},
-    {label:'Campaign-days freed (payment speed)', val:res.totalCampDaysFreed / 8, unit:'hrs equiv / yr', detail:`${res.daysSaved} days saved × ${fmtN(res.campYearA)} campaigns ÷ 8 hr/day`},
+    {label:'Coordination hours reclaimed', val:res.totalHrsSaved, detail:`${res.hrsSaved} hrs/campaign × ${fmtN(res.campYearA)} portal campaigns`},
+    {label:'Mismatch rework hours avoided', val:res.reworkAvoided, detail:`${fmtN(res.prevented)} mismatches prevented × ${st.reworkHrs} hrs rework each`},
+    {label:'Payment delay freed (hrs equiv)', val:res.totalCampDaysFreed/8, detail:`4 days × ${fmtN(res.campYearA)} campaigns ÷ 8 hr/day (fixed 80% speed gain)`},
   ];
-  const maxV = Math.max(...items.map(i => i.val), 1);
-  const el = document.getElementById('breakdown-bars');
-  el.innerHTML = items.map(item => `
+  const maxV = Math.max(...items.map(i=>i.val), 1);
+  document.getElementById('breakdown-bars').innerHTML = items.map(item => `
     <div style="margin-bottom:14px;">
       <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
         <span style="font-size:12.5px;font-weight:500;">${item.label}</span>
@@ -1011,250 +922,191 @@ function drawBreakdown(res) {
         <div style="height:100%;width:${(item.val/maxV*100).toFixed(1)}%;background:var(--ink);border-radius:4px;transition:width .4s;"></div>
       </div>
       <div style="font-size:10.5px;color:var(--ink-5);font-family:var(--mono);">${item.detail}</div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
-// ─── SENSITIVITY ─────────────────────────────────────────────────────────────
+// ─── WHAT-IF TABLES ──────────────────────────────────────────────────────────
 function drawFullSens() {
-  const rows = Object.entries(SCENARIO_PRESETS).map(([sc, pre]) => {
-    const p = {
-      brands: Math.round(TOTAL_BRANDS * pre.brandsAdopt),
-      cpm: st.cpm, mmB: st.mmB, cyB: st.cyB, hrB: st.hrB,
-      mmA: pre.mmAfter, cyA: pre.cycleAfter, hrA: pre.hrsAfter,
-      reworkHrs: st.reworkHrs, payB: st.payB, payA: pre.payAfter,
-      gmvInc: pre.gmvInc, upliftPct: pre.upliftPct,
-    };
+  document.getElementById('full-sens-body').innerHTML = Object.entries(SCENARIO_PRESETS).map(([sc, pre]) => {
+    const p = {brands:Math.round(TOTAL_BRANDS*pre.brandsAdopt), cpm:st.cpm, hrA:pre.hrsAfter, mmA:pre.mmAfter, reworkHrs:st.reworkHrs, compr:pre.compr, upliftPct:pre.upliftPct, gmvInc:pre.gmvInc};
     const r = compute(p);
     return `<tr class="${sc===st.scenario?'hl':''}">
       <td><strong>${sc.charAt(0).toUpperCase()+sc.slice(1)}</strong>${sc===st.scenario?' ◀':''}</td>
       <td class="num">${Math.round(pre.brandsAdopt*TOTAL_BRANDS)} brands</td>
       <td class="num">${pre.mmAfter}%</td>
-      <td class="num">${pre.cycleAfter} days</td>
+      <td class="num">${pre.compr}% (→ ${(CYCLE_BEFORE*(1-pre.compr/100)).toFixed(1)} days)</td>
       <td class="num">${pre.hrsAfter} hrs</td>
       <td class="num">${fmtHrs(r.totalHrsSaved)}</td>
       <td class="num">${fmtHrs(r.reworkAvoided)}</td>
-      <td class="num">${r.brandsThisEid} brands</td>
-      <td class="num">${fmtPct(r.paySpeedPct)} faster</td>
+      <td class="num">${r.brandsCycle} brands</td>
       <td class="num">${fmtPKR(r.totalBrandGMV)}</td>
     </tr>`;
   }).join('');
-  document.getElementById('full-sens-body').innerHTML = rows;
 }
 
 function drawStress() {
-  const base = compute(st);
   const tests = [
     {label:'If only 10 brands adopt (vs 22)', p:{...st, brands:10}},
     {label:'If mismatch rate only drops to 20% (vs 8%)', p:{...st, mmA:20}},
-    {label:'If cycle only improves to 15 days (vs 9.8)', p:{...st, cyA:15}},
+    {label:'If cycle only compresses by 25% (vs 53%)', p:{...st, compr:25}},
     {label:'If hours only drop to 12 per campaign (vs 6)', p:{...st, hrA:12}},
-    {label:'If payment delay only drops to 3 days (vs 1)', p:{...st, payA:3}},
     {label:'If only 20% of campaigns achieve GMV uplift (vs 45%)', p:{...st, upliftPct:20}},
-    {label:'If ALL pessimistic conditions hold simultaneously', p:{...st, brands:10, mmA:20, cyA:15, hrA:12, payA:3, upliftPct:20}},
+    {label:'If ALL pessimistic conditions hold simultaneously', p:{...st, brands:10, mmA:20, compr:25, hrA:12, upliftPct:20}},
   ];
-  const el = document.getElementById('stress-body');
-  el.innerHTML = tests.map(t => {
+  document.getElementById('stress-body').innerHTML = tests.map(t => {
     const r = compute(t.p);
-    const hrsOk = r.totalHrsSaved > 500;
-    const brandsOk = r.brandsThisEid > BRANDS_CURRENT;
+    const ok = r.brandsCycle > BRANDS_CURRENT;
     return `<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule);">
       <div style="flex:1;font-size:12.5px;">${t.label}</div>
       <div style="display:flex;gap:12px;flex-shrink:0;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
-        <div style="text-align:right;">
-          <div style="font-size:11px;color:var(--ink-5);">Hrs freed / yr</div>
-          <div style="font-family:var(--mono);font-size:13px;font-weight:500;">${fmtHrs(r.totalHrsSaved)}</div>
-        </div>
-        <div style="text-align:right;">
-          <div style="font-size:11px;color:var(--ink-5);">Brands / cycle</div>
-          <div style="font-family:var(--mono);font-size:13px;font-weight:500;">${r.brandsThisEid}</div>
-        </div>
-        <div style="text-align:right;">
-          <div style="font-size:11px;color:var(--ink-5);">Pay speed</div>
-          <div style="font-family:var(--mono);font-size:13px;font-weight:500;">${fmtPct(r.paySpeedPct)} faster</div>
-        </div>
-        <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:${brandsOk?'#f0fdf4':'#fef2f2'};color:${brandsOk?'#166534':'#991b1b'};">${brandsOk?'Still improvement':'Minimal gain'}</span>
-      </div>
-    </div>`;
+        <div style="text-align:right;"><div style="font-size:11px;color:var(--ink-5);">Hrs freed / yr</div><div style="font-family:var(--mono);font-size:13px;font-weight:500;">${fmtHrs(r.totalHrsSaved)}</div></div>
+        <div style="text-align:right;"><div style="font-size:11px;color:var(--ink-5);">Brands / cycle</div><div style="font-family:var(--mono);font-size:13px;font-weight:500;">${r.brandsCycle}</div></div>
+        <div style="text-align:right;"><div style="font-size:11px;color:var(--ink-5);">Brand GMV</div><div style="font-family:var(--mono);font-size:13px;font-weight:500;">${fmtPKR(r.totalBrandGMV)}</div></div>
+        <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:${ok?'#f0fdf4':'#fef2f2'};color:${ok?'#166534':'#991b1b'};">${ok?'Still improvement':'Minimal gain'}</span>
+      </div></div>`;
   }).join('');
 }
 
-// ─── FILL ─────────────────────────────────────────────────────────────────────
+// ─── SLIDER FILLS ────────────────────────────────────────────────────────────
 function setFill(id, min, max, val) {
-  const el = document.getElementById('f-' + id);
-  if(el) el.style.width = Math.max(0, Math.min(100, (val-min)/(max-min)*100)) + '%';
+  const el = document.getElementById('f-'+id);
+  if(el) el.style.width = Math.max(0, Math.min(100, (val-min)/(max-min)*100))+'%';
 }
 
 // ─── MAIN UPDATE ─────────────────────────────────────────────────────────────
 function update() {
   st.brands     = +document.getElementById('s-brands').value;
   st.cpm        = +document.getElementById('s-cpm').value;
-  st.hrB        = +document.getElementById('s-hr-b').value;
   st.hrA        = +document.getElementById('s-hr-a').value;
-  st.mmB        = +document.getElementById('s-mm-b').value;
   st.mmA        = +document.getElementById('s-mm-a').value;
   st.reworkHrs  = +document.getElementById('s-rework').value;
-  st.cyB        = +document.getElementById('s-cy-b').value;
-  st.cyA        = +document.getElementById('s-cy-a').value;
-  st.payB       = +document.getElementById('s-pay-b').value;
-  st.payA       = +document.getElementById('s-pay-a').value;
-  st.gmvInc     = +document.getElementById('s-gmv-inc').value;
+  st.compr      = +document.getElementById('s-compr').value;
   st.upliftPct  = +document.getElementById('s-uplift-pct').value;
+  st.gmvInc     = +document.getElementById('s-gmv-inc').value;
 
   setFill('brands',5,32,st.brands);
-  setFill('cpm',5,60,st.cpm);
-  setFill('hr-b',6,40,st.hrB);
   setFill('hr-a',2,14,st.hrA);
-  setFill('mm-b',10,60,st.mmB);
+  setFill('compr',15,72,st.compr);
   setFill('mm-a',1,20,st.mmA);
   setFill('rework',2,20,st.reworkHrs);
-  setFill('cy-b',10,45,st.cyB);
-  setFill('cy-a',4,18,st.cyA);
-  setFill('pay-b',3,14,st.payB);
-  setFill('pay-a',0.5,3,st.payA);
-  setFill('gmv-inc',200000,5000000,st.gmvInc);
+  setFill('cpm',5,60,st.cpm);
   setFill('uplift-pct',10,80,st.upliftPct);
+  setFill('gmv-inc',200000,5000000,st.gmvInc);
 
-  document.getElementById('lv-brands').textContent      = st.brands;
-  document.getElementById('lv-cpm').textContent         = st.cpm;
-  document.getElementById('lv-hr-b').textContent        = st.hrB + ' hrs';
-  document.getElementById('lv-hr-a').textContent        = st.hrA + ' hrs';
-  document.getElementById('lv-mm-b').textContent        = st.mmB + '%';
-  document.getElementById('lv-mm-a').textContent        = st.mmA + '%';
-  document.getElementById('lv-rework').textContent      = st.reworkHrs + ' hrs';
-  document.getElementById('lv-cy-b').textContent        = st.cyB + ' days';
-  document.getElementById('lv-cy-a').textContent        = st.cyA + ' days';
-  document.getElementById('lv-pay-b').textContent       = st.payB + ' days';
-  document.getElementById('lv-pay-a').textContent       = st.payA + ' day' + (st.payA === 1 ? '' : 's');
-  document.getElementById('lv-gmv-inc').textContent     = fmtPKR(st.gmvInc);
-  document.getElementById('lv-uplift-pct').textContent  = st.upliftPct + '%';
+  const cyA = (CYCLE_BEFORE * (1 - st.compr/100)).toFixed(1);
+  document.getElementById('lv-brands').textContent     = st.brands;
+  document.getElementById('lv-hr-a').textContent       = st.hrA+' hrs';
+  document.getElementById('lv-compr').textContent      = st.compr+'%';
+  document.getElementById('lv-cy-derived').textContent = cyA;
+  document.getElementById('lv-mm-a').textContent       = st.mmA+'%';
+  document.getElementById('lv-rework').textContent     = st.reworkHrs+' hrs';
+  document.getElementById('lv-cpm').textContent        = st.cpm;
+  document.getElementById('lv-uplift-pct').textContent = st.upliftPct+'%';
+  document.getElementById('lv-gmv-inc').textContent    = fmtPKR(st.gmvInc);
 
   const r = compute(st);
 
   // Hero KPIs
   document.getElementById('h-hrs').textContent      = fmtHrs(r.totalHrsSaved);
-  document.getElementById('h-hrs-sub').textContent  = `${r.hrsSaved} hrs/campaign × ${fmtN(r.campYearA)} campaigns · ${fmtPct(r.productivityPct)} gain`;
-  document.getElementById('h-cycle').textContent    = fmtPct(r.cycleDropPct) + ' faster';
+  document.getElementById('h-hrs-sub').textContent  = `${r.hrsSaved} hrs saved/campaign × ${fmtN(r.campYearA)} campaigns · ${fmtPct(r.prodPct)} gain`;
+  document.getElementById('h-cycle').textContent    = fmtPct(r.cycleDropPct)+' faster';
+  document.getElementById('h-cycle-sub').textContent = `21 days → ${r.cyA.toFixed(1)} days with portal`;
   document.getElementById('h-rework').textContent   = fmtHrs(r.reworkAvoided);
-  document.getElementById('h-rework-sub').textContent = `${fmtN(r.prevented)} mismatches prevented · ${fmtPct(r.mismatchDropPct)} fewer rejections`;
-  document.getElementById('h-brands').textContent   = r.brandsThisEid + ' brands';
+  document.getElementById('h-rework-sub').textContent = `${fmtN(r.prevented)} mismatches prevented · ${fmtPct(r.mmDropPct)} fewer rejections`;
+  document.getElementById('h-brands').textContent   = r.brandsCycle+' brands';
 
-  // Before/After banner
-  document.getElementById('b-hours').textContent    = st.hrA + ' hrs';
-  document.getElementById('b-cycle').textContent    = st.cyA + ' days';
-  document.getElementById('b-mismatch').textContent = st.mmA + '%';
-  document.getElementById('b-payment').textContent  = st.payA < 1 ? '<12 hrs' : (st.payA === 1 ? '<24 hrs' : st.payA + ' days');
-  document.getElementById('b-brands').textContent   = r.brandsThisEid + ' of 32';
+  // Summary callout
+  document.getElementById('sum-hrs').textContent    = fmtHrs(r.totalHrsSaved);
+  document.getElementById('sum-brands').textContent = r.brandsCycle;
+  document.getElementById('sum-cycle').textContent  = fmtPct(r.cycleDropPct);
+  document.getElementById('sum-cy-days').textContent = r.cyA.toFixed(1)+' days';
+
+  // Before/after banner
+  document.getElementById('b-hours').textContent   = st.hrA+' hrs';
+  document.getElementById('b-cycle').textContent   = r.cyA.toFixed(1)+' days';
+  document.getElementById('b-mismatch').textContent = st.mmA+'%';
+  document.getElementById('b-brands').textContent  = r.brandsCycle+' of 32';
 
   // Lever 1
-  document.getElementById('l1-formula').textContent   = `(${st.hrB} − ${st.hrA}) hrs/campaign × ${fmtN(r.campYearA)} campaigns/yr`;
-  document.getElementById('l1-hrs-saved').textContent  = r.hrsSaved + ' hrs per campaign';
-  document.getElementById('l1-campaigns').textContent  = fmtN(r.campYearA) + ' (×' + r.capMult.toFixed(2) + ' capacity)';
-  document.getElementById('l1-prod-pct').textContent   = fmtPct(r.productivityPct) + ' less time per campaign';
-  document.getElementById('l1-v').textContent          = fmtHrs(r.totalHrsSaved) + ' / yr';
-  document.getElementById('l1-pct').textContent        = fmtPct(r.productivityPct) + ' productivity gain per campaign';
+  document.getElementById('l1-formula').textContent    = `(18 − ${st.hrA}) hrs/campaign × ${fmtN(r.campYearA)} campaigns/yr`;
+  document.getElementById('l1-hrs-saved').textContent  = r.hrsSaved+' hrs per campaign';
+  document.getElementById('l1-campaigns').textContent  = fmtN(r.campYearA)+' (×'+r.capMult.toFixed(2)+' capacity)';
+  document.getElementById('l1-prod-pct').textContent   = fmtPct(r.prodPct)+' less time per campaign';
+  document.getElementById('l1-v').textContent          = fmtHrs(r.totalHrsSaved)+' / yr';
+  document.getElementById('l1-pct').textContent        = fmtPct(r.prodPct)+' productivity gain per campaign';
 
   // Lever 2
-  document.getElementById('l2-formula').textContent  = `(${fmtN(r.disputesB)} today − ${fmtN(r.disputesA)} after) × ${st.reworkHrs} hrs rework`;
-  document.getElementById('l2-prevented').textContent = fmtN(r.prevented) + ' events / yr';
-  document.getElementById('l2-rework-per').textContent = st.reworkHrs + ' hrs per event';
-  document.getElementById('l2-rate-drop').textContent = st.mmB + '% → ' + st.mmA + '% (−' + fmtPct(r.mismatchDropPct) + ')';
-  document.getElementById('l2-v').textContent         = fmtHrs(r.reworkAvoided) + ' rework avoided / yr';
-  document.getElementById('l2-pct').textContent       = fmtPct(r.mismatchDropPct) + ' reduction in mismatch rate';
+  document.getElementById('l2-formula').textContent   = `(${fmtN(r.disputesB)} today − ${fmtN(r.disputesA)} after) × ${st.reworkHrs} hrs`;
+  document.getElementById('l2-prevented').textContent = fmtN(r.prevented)+' events / yr';
+  document.getElementById('l2-rework-per').textContent = st.reworkHrs+' hrs per event';
+  document.getElementById('l2-rate-drop').textContent = `${MM_BEFORE}% → ${st.mmA}% (−${fmtPct(r.mmDropPct)})`;
+  document.getElementById('l2-v').textContent         = fmtHrs(r.reworkAvoided)+' rework avoided / yr';
+  document.getElementById('l2-pct').textContent       = fmtPct(r.mmDropPct)+' reduction in mismatch rate';
 
   // Lever 3
-  document.getElementById('l3-formula').textContent    = `min(${st.brands}, round(6 × ${st.hrB} / ${st.hrA})) brands/cycle`;
-  document.getElementById('l3-cap-mult').textContent   = r.capMult.toFixed(2) + '× (cycle: ' + st.cyB + '→' + st.cyA + ' days)';
-  document.getElementById('l3-camps').textContent      = fmtN(r.campYearA) + ' / yr';
-  document.getElementById('l3-additional').textContent = '+' + fmtN(r.additionalCamps) + ' more than today';
-  document.getElementById('l3-v').textContent          = r.brandsThisEid + ' brands / campaign cycle';
-  document.getElementById('l3-brands').textContent     = '+' + r.additionalBrands + ' additional brands served vs today (' + BRANDS_CURRENT + ')';
+  document.getElementById('l3-formula').textContent    = `min(${st.brands}, round(6 × 18 / ${st.hrA})) brands/cycle`;
+  document.getElementById('l3-cap-mult').textContent   = r.capMult.toFixed(2)+'× (21 → '+r.cyA.toFixed(1)+' days)';
+  document.getElementById('l3-camps').textContent      = fmtN(r.campYearA)+' / yr';
+  document.getElementById('l3-additional').textContent = '+'+fmtN(r.additionalCamps)+' more than today';
+  document.getElementById('l3-v').textContent          = r.brandsCycle+' brands / campaign cycle';
+  document.getElementById('l3-brands').textContent     = '+'+r.additionalBrands+' additional brands served vs today ('+BRANDS_CURRENT+')';
 
   // Lever 4
-  document.getElementById('l4-formula').textContent  = `(${st.payB} − ${st.payA}) days × ${fmtN(r.campYearA)} campaigns / yr`;
-  document.getElementById('l4-days-saved').textContent = r.daysSaved + ' days per campaign';
-  document.getElementById('l4-camps').textContent     = fmtN(r.campYearA) + ' portal campaigns';
-  document.getElementById('l4-speed-pct').textContent = fmtPct(r.paySpeedPct) + ' faster payment release';
-  document.getElementById('l4-v').textContent         = fmtN(r.totalCampDaysFreed) + ' campaign-days freed / yr';
-  document.getElementById('l4-sub').textContent       = fmtPct(r.paySpeedPct) + ' faster · from ' + st.payB + ' days → ' + st.payA + ' day' + (st.payA===1?'':'s');
+  document.getElementById('l4-formula').textContent = `(${PAY_BEFORE} − ${PAY_AFTER}) days × ${fmtN(r.campYearA)} campaigns / yr`;
+  document.getElementById('l4-camps').textContent   = fmtN(r.campYearA)+' portal campaigns';
+  document.getElementById('l4-v').textContent       = fmtN(r.totalCampDaysFreed)+' campaign-days freed / yr';
+  document.getElementById('l4-sub').textContent     = '80% faster · '+PAY_BEFORE+' days → <24 hrs (fixed portal target)';
 
   // Lever 5
-  document.getElementById('l5-formula').textContent = `${fmtN(r.campYearA)} campaigns × ${st.upliftPct}% hit rate × ${fmtPKR(st.gmvInc)} avg GMV uplift`;
-  document.getElementById('l5-uplift-n').textContent = fmtN(r.campsWithUplift) + ' / yr';
+  document.getElementById('l5-formula').textContent  = `${fmtN(r.campYearA)} campaigns × ${st.upliftPct}% hit rate × ${fmtPKR(st.gmvInc)} avg GMV uplift`;
+  document.getElementById('l5-uplift-n').textContent = fmtN(r.campsWithUplift)+' / yr';
   document.getElementById('l5-gmv-inc').textContent  = fmtPKR(st.gmvInc);
-  document.getElementById('l5-v').textContent        = fmtPKR(r.totalBrandGMV) + ' brand GMV / yr';
+  document.getElementById('l5-v').textContent        = fmtPKR(r.totalBrandGMV)+' brand GMV / yr';
 
-  const scLabel = {conservative:'Conservative',base:'Base case',aggressive:'Aggressive'}[st.scenario];
-  document.getElementById('sc-badge').textContent    = scLabel;
-  document.getElementById('sc-badge-2').textContent  = scLabel;
-  document.getElementById('chart-sc').textContent    = scLabel;
+  const scLabel = {conservative:'Conservative', base:'Base case', aggressive:'Aggressive'}[st.scenario];
+  document.getElementById('sc-badge').textContent   = scLabel;
+  document.getElementById('sc-badge-2').textContent = scLabel;
+  document.getElementById('chart-sc').textContent   = scLabel;
 
   drawCapChart(r);
   drawBreakdown(r);
-
-  if(document.getElementById('full-sens-body').children.length > 0) {
-    drawFullSens(); drawStress();
-  }
+  if(document.getElementById('full-sens-body').children.length > 0) { drawFullSens(); drawStress(); }
 }
 
-// ─── SCENARIO ────────────────────────────────────────────────────────────────
+// ─── SCENARIO SWITCHER ───────────────────────────────────────────────────────
 function setScenario(sc) {
   st.scenario = sc;
   const pre = SCENARIO_PRESETS[sc];
-  const updates = {
-    'brands': Math.round(TOTAL_BRANDS * pre.brandsAdopt),
-    'mm-a': pre.mmAfter, 'cy-a': pre.cycleAfter, 'hr-a': pre.hrsAfter,
-    'pay-a': pre.payAfter, 'gmv-inc': pre.gmvInc, 'uplift-pct': pre.upliftPct,
-  };
-  Object.entries(updates).forEach(([id, val]) => {
-    const el = document.getElementById('s-' + id);
-    if(el) el.value = val;
-  });
+  const map = {'brands':Math.round(TOTAL_BRANDS*pre.brandsAdopt), 'mm-a':pre.mmAfter, 'hr-a':pre.hrsAfter, 'compr':pre.compr, 'uplift-pct':pre.upliftPct, 'gmv-inc':pre.gmvInc};
+  Object.entries(map).forEach(([id, val]) => { const el = document.getElementById('s-'+id); if(el) el.value = val; });
   ['c','b','a'].forEach(x => document.getElementById('p-'+x).classList.remove('on'));
-  document.getElementById('p-' + {conservative:'c', base:'b', aggressive:'a'}[sc]).classList.add('on');
+  document.getElementById('p-'+{conservative:'c',base:'b',aggressive:'a'}[sc]).classList.add('on');
   update();
 }
 
 function resetDefaults() {
   st = {...DEFAULTS};
-  const map = {
-    brands:'s-brands', cpm:'s-cpm', hrB:'s-hr-b', hrA:'s-hr-a',
-    mmB:'s-mm-b', mmA:'s-mm-a', reworkHrs:'s-rework',
-    cyB:'s-cy-b', cyA:'s-cy-a', payB:'s-pay-b', payA:'s-pay-a',
-    gmvInc:'s-gmv-inc', upliftPct:'s-uplift-pct',
-  };
-  Object.entries(map).forEach(([k, id]) => {
-    const el = document.getElementById(id);
-    if(el) el.value = st[k];
-  });
+  const map = {brands:'s-brands',cpm:'s-cpm',hrA:'s-hr-a',mmA:'s-mm-a',reworkHrs:'s-rework',compr:'s-compr',upliftPct:'s-uplift-pct',gmvInc:'s-gmv-inc'};
+  Object.entries(map).forEach(([k,id]) => { const el = document.getElementById(id); if(el) el.value = st[k]; });
   setScenario('base');
 }
 
-// ─── TABS ─────────────────────────────────────────────────────────────────────
+// ─── TAB SWITCHER ────────────────────────────────────────────────────────────
 function showTab(id) {
-  ['sim','logic','evidence','sensitivity'].forEach(t => {
-    const el = document.getElementById('tab-' + t);
+  ['sim','logic','evidence','whatif'].forEach(t => {
+    const el = document.getElementById('tab-'+t);
     if(el) el.style.display = t === id ? 'block' : 'none';
   });
-  document.querySelectorAll('.tab').forEach((t, i) => {
-    t.classList.toggle('on', ['sim','logic','evidence','sensitivity'][i] === id);
-  });
-  if(id === 'sensitivity') { drawFullSens(); drawStress(); }
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('on', ['sim','logic','evidence','whatif'][i] === id));
+  if(id === 'whatif') { drawFullSens(); drawStress(); }
 }
 
-// ─── INIT ─────────────────────────────────────────────────────────────────────
+// ─── INIT ────────────────────────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
-  const specs = [
-    ['brands',5,32,DEFAULTS.brands], ['cpm',5,60,DEFAULTS.cpm],
-    ['hr-b',6,40,DEFAULTS.hrB], ['hr-a',2,14,DEFAULTS.hrA],
-    ['mm-b',10,60,DEFAULTS.mmB], ['mm-a',1,20,DEFAULTS.mmA],
-    ['rework',2,20,DEFAULTS.reworkHrs],
-    ['cy-b',10,45,DEFAULTS.cyB], ['cy-a',4,18,DEFAULTS.cyA],
-    ['pay-b',3,14,DEFAULTS.payB], ['pay-a',0.5,3,DEFAULTS.payA],
-    ['gmv-inc',200000,5000000,DEFAULTS.gmvInc],
-    ['uplift-pct',10,80,DEFAULTS.upliftPct],
-  ];
-  specs.forEach(([id,min,max,val]) => setFill(id, min, max, val));
+  [['brands',5,32,DEFAULTS.brands],['hr-a',2,14,DEFAULTS.hrA],['compr',15,72,DEFAULTS.compr],
+   ['mm-a',1,20,DEFAULTS.mmA],['rework',2,20,DEFAULTS.reworkHrs],['cpm',5,60,DEFAULTS.cpm],
+   ['uplift-pct',10,80,DEFAULTS.upliftPct],['gmv-inc',200000,5000000,DEFAULTS.gmvInc]
+  ].forEach(([id,min,max,val]) => setFill(id,min,max,val));
   update();
 });
 </script>
