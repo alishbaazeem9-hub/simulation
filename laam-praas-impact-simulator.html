@@ -213,7 +213,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <div>
         <div class="eyebrow">Impact Simulation · LAAM Group (Pvt.) Ltd. · PRaaS Portal — Scenario C</div>
         <div class="page-title">From WhatsApp chaos to structured workflow — how much time does the portal free?</div>
-        <div class="page-sub">This simulator quantifies the operational impact of replacing LAAM's fragmented WhatsApp + Google Sheets pipeline with a custom PRaaS portal. LAAM charges brands and talents <strong>0% commission</strong> — PRaaS is a complementary service. Impact is measured in <strong>time saved, coordination eliminated, capacity unlocked, and brand GMV enabled</strong>. All baseline numbers are grounded in Aiman Murtaza's operator logs (18 hrs/campaign) and Maliha Noor's mismatch interview (33% rejection rate).</div>
+        <div class="page-sub">Quantifies the operational impact of replacing LAAM's WhatsApp + Sheets pipeline with a structured PRaaS portal. <strong>0% commission</strong> — value is in <strong>time saved, coordination eliminated, capacity unlocked, and brand GMV enabled</strong>. All baselines are fixed from real operator data.</div>
       </div>
       <div class="hd-right">
         <div class="pill-row">
@@ -239,7 +239,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     <!-- COMMISSION STRIP -->
     <div class="commission-strip">
       <span class="commission-badge">0% Commission Model</span>
-      <span>LAAM charges brands and talents <strong>zero commission</strong> on PRaaS campaigns. The portal is a complementary service — value is measured in <strong>operator time saved, cycle speed, capacity unlocked, and brand GMV enabled</strong>, not revenue extraction.</span>
+      <span>PRaaS is a complementary service — LAAM takes <strong>zero commission</strong>. Value is in <strong>time saved, cycle speed, capacity, and brand GMV</strong>, not revenue extraction.</span>
     </div>
 
     <!-- PROCESS MAP -->
@@ -281,7 +281,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val bad">3–7 days</span></div>
         <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val bad">6 of 32 aligned</span></div>
         <div class="baf-row"><span class="baf-metric">Post-campaign GMV data captured</span><span class="baf-val bad">0%</span></div>
-        <div class="baf-source">Source: Aiman Murtaza operator logs · Maliha Noor interview · Apr 2026</div>
+        <div class="baf-source">Source: Operator logs · Team interviews · Apr 2026</div>
       </div>
       <div class="baf-arrow">→</div>
       <div class="baf-side after">
@@ -338,7 +338,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Portal adoption</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of 32 brands that confirmed PRaaS interest in the live portfolio</div></div>
+              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of 32 brands that confirmed PRaaS interest</div></div>
               <div class="field-val" id="lv-brands">22</div>
             </div>
             <div class="track"><div class="fill" id="f-brands"></div></div>
@@ -353,17 +353,17 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Time savings targets</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Coordination hrs with portal / campaign</div><div class="field-hint">Portal replaces all WhatsApp back-and-forth with structured intake + auto-notifications</div></div>
+              <div><div class="field-label">Coordination hrs with portal / campaign</div><div class="field-hint">Structured intake + auto-notifications replaces WhatsApp back-and-forth</div></div>
               <div class="field-val" id="lv-hr-a">6 hrs</div>
             </div>
             <div class="track"><div class="fill" id="f-hr-a"></div></div>
             <input type="range" id="s-hr-a" min="2" max="14" step="1" value="6" oninput="update()">
             <div class="range-labels"><span>2 hrs</span><span>14 hrs</span></div>
-            <div class="fixed-tag">🔒 Baseline fixed: 18 hrs/campaign (Aiman Murtaza log)</div>
+            <div class="fixed-tag">🔒 Baseline fixed: 18 hrs/campaign (operator log)</div>
           </div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Cycle compression</div><div class="field-hint">How much faster is brief → go-live with the portal? (baseline: 21 days)</div></div>
+              <div><div class="field-label">Cycle compression</div><div class="field-hint">How much faster is brief → go-live? Baseline: 21 days</div></div>
               <div class="field-val" id="lv-compr">53%</div>
             </div>
             <div class="track"><div class="fill" id="f-compr"></div></div>
@@ -379,17 +379,17 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Mismatch quality target</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Mismatch rate with portal</div><div class="field-hint">Budget firewall catches wrong-tier talent at submission — before any outreach time is spent</div></div>
+              <div><div class="field-label">Mismatch rate with portal</div><div class="field-hint">Budget firewall catches wrong-tier talent at intake — before outreach begins</div></div>
               <div class="field-val" id="lv-mm-a">8%</div>
             </div>
             <div class="track"><div class="fill" id="f-mm-a"></div></div>
             <input type="range" id="s-mm-a" min="1" max="20" step="0.5" value="8" oninput="update()">
             <div class="range-labels"><span>1%</span><span>20%</span></div>
-            <div class="fixed-tag">🔒 Baseline fixed: 33% mismatch rate (Maliha Noor interview)</div>
+            <div class="fixed-tag">🔒 Baseline fixed: 33% mismatch rate (team interview)</div>
           </div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Rework hours per mismatch event</div><div class="field-hint">Time wasted per failed campaign: brief rewrite, re-outreach, re-scheduling</div></div>
+              <div><div class="field-label">Rework hours per mismatch event</div><div class="field-hint">Brief rewrite + re-outreach + rescheduling per failed match</div></div>
               <div class="field-val" id="lv-rework">8 hrs</div>
             </div>
             <div class="track"><div class="fill" id="f-rework"></div></div>
@@ -404,7 +404,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Campaign volume &amp; brand GMV</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Active campaigns / month (today)</div><div class="field-hint">25 WhatsApp groups at peak = 25 concurrent campaigns running in parallel</div></div>
+              <div><div class="field-label">Active campaigns / month (today)</div><div class="field-hint">25 WhatsApp groups at peak = 25 concurrent campaigns</div></div>
               <div class="field-val" id="lv-cpm">25</div>
             </div>
             <div class="track"><div class="fill" id="f-cpm"></div></div>
@@ -414,7 +414,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           </div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">% of campaigns achieving GMV uplift</div><div class="field-hint">Well-executed campaigns with right talent, brief, and timing — not every campaign qualifies</div></div>
+              <div><div class="field-label">% of campaigns achieving GMV uplift</div><div class="field-hint">Not every campaign qualifies — right talent, brief, and timing required</div></div>
               <div class="field-val" id="lv-uplift-pct">45%</div>
             </div>
             <div class="track"><div class="fill" id="f-uplift-pct"></div></div>
@@ -424,7 +424,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           </div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Avg incremental brand GMV / campaign (PKR)</div><div class="field-hint">Brand's incremental sales from a well-executed campaign · LAAM takes 0%</div></div>
+              <div><div class="field-label">Avg incremental brand GMV / campaign (PKR)</div><div class="field-hint">Brand's incremental sales per well-executed campaign · LAAM takes 0%</div></div>
               <div class="field-val" id="lv-gmv-inc">PKR 1.2M</div>
             </div>
             <div class="track"><div class="fill" id="f-gmv-inc"></div></div>
@@ -468,7 +468,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Productivity gain per campaign</span><span class="lv-calc-val" id="l1-prod-pct">—</span></div>
               <div class="lv-value" id="l1-v">—</div>
               <div class="lv-value-sub" id="l1-pct">—</div>
-              <div class="lv-proof">Structured form intake + Kanban board + auto-notifications replaces 25+ WhatsApp groups</div>
+              <div class="lv-proof">Structured intake + Kanban + auto-notifications replaces 25+ WhatsApp groups</div>
             </div>
 
             <!-- LEVER 2 -->
@@ -483,7 +483,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Rejection rate drop</span><span class="lv-calc-val" id="l2-rate-drop">—</span></div>
               <div class="lv-value" id="l2-v">—</div>
               <div class="lv-value-sub" id="l2-pct">—</div>
-              <div class="lv-proof">Budget firewall at intake catches wrong-tier talent before any outreach time is spent</div>
+              <div class="lv-proof">Budget firewall at intake catches wrong-tier talent before any outreach is spent</div>
             </div>
 
             <!-- LEVER 3 -->
@@ -498,7 +498,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Additional campaigns vs today</span><span class="lv-calc-val" id="l3-additional">—</span></div>
               <div class="lv-value" id="l3-v">—</div>
               <div class="lv-value-sub" id="l3-brands">—</div>
-              <div class="lv-proof">32 brands aligned, only 6 executed in Peak Season 2026. PKR 38.75M in budgets went unserved — coordination ceiling, not demand</div>
+              <div class="lv-proof">32 brands aligned, only 6 executed in peak season. PKR 38.75M in budgets went unserved — a coordination ceiling, not a demand problem</div>
             </div>
 
             <!-- LEVER 4 -->
@@ -513,7 +513,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Payment speed improvement</span><span class="lv-calc-val">80% faster (fixed target)</span></div>
               <div class="lv-value" id="l4-v">—</div>
               <div class="lv-value-sub" id="l4-sub">—</div>
-              <div class="lv-proof">Escrow wallet + WHT disclosed at intake eliminates payment dispute chain. Target: &lt;24 hrs release (fixed per Step 7)</div>
+              <div class="lv-proof">Escrow wallet + WHT disclosed at intake eliminates the payment dispute chain. Fixed target: &lt;24 hrs release</div>
             </div>
 
           </div>
@@ -530,7 +530,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
             <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;align-items:start;">
               <div>
                 <div class="lv-formula" id="l5-formula">—</div>
-                <div class="lv-proof" style="margin-top:6px;">Proof: Bareen × Hira Faisal +141% GMV (PKR 1.87M → PKR 4.51M) · Urge Pret × Sajal Aly +652% (PKR 2.76M → PKR 20.73M) · March 2026</div>
+                <div class="lv-proof" style="margin-top:6px;">Real data: Bareen × Hira Faisal +141% (PKR 1.87M → 4.51M) · Urge Pret +652% (outlier, excluded from base) · March 2026</div>
               </div>
               <div>
                 <div class="lv-calc"><span class="lv-calc-label">Campaigns with uplift / yr</span><span class="lv-calc-val" id="l5-uplift-n">—</span></div>
@@ -588,13 +588,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <div class="card-bd">
         <div style="margin-bottom:16px;">
           <div class="note-ey">Core logic</div>
-          <div class="note-body">LAAM's PRaaS portal charges <strong>0% commission</strong>. The value is in <strong>operational efficiency</strong>: less time per campaign, fewer mismatches caught late, more brands served per cycle, faster payments, and better-executed campaigns generating more GMV for brands. Every lever is calculated from time units. Baseline numbers are fixed from real interviews — only targets and adoption are adjustable.</div>
+          <div class="note-body">PRaaS charges <strong>0% commission</strong>. Value is in <strong>operational efficiency</strong>: less time per campaign, fewer late mismatches, more brands per cycle, faster payments, and better GMV for brands. Baselines are fixed from real data — only targets and adoption are adjustable.</div>
         </div>
         <div class="method-step">
           <div class="method-num">1</div>
           <div>
             <div class="method-title">Campaign capacity with portal</div>
-            <div class="method-body">Faster cycle time = same operator can handle more campaigns. Cycle compression is set by the slider (default 53% = 21 days → 9.8 days). We cap the capacity multiplier at 1.8× to be conservative — the operator also needs buffer for quality reviews.</div>
+            <div class="method-body">Faster cycle = more campaigns per operator. Default 53% compression = 21 → 9.8 days. Capacity multiplier capped at 1.8× conservatively (operator needs quality buffer).</div>
             <div class="method-formula">Cycle after = 21 × (1 − compression%) · Capacity mult = min(21 / cycle_after, 1.8)</div>
             <div class="method-formula">Campaigns / yr (portal) = (campaigns / month × 12) × adoption% × capacity_mult</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (25 × 12) × 70% × 1.8 = <strong>378 campaigns / year</strong> vs 300 today</div>
@@ -604,7 +604,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">2</div>
           <div>
             <div class="method-title">Lever 01 — Coordination hours reclaimed</div>
-            <div class="method-body">Aiman Murtaza confirmed ~18 hrs/campaign: managing 25+ WhatsApp groups, updating Sheets manually, calling brands to re-confirm briefs, chasing payments. Portal's structured intake + Kanban board + auto-notifications compresses this to the slider value (default 6 hrs). Baseline of 18 hrs is fixed from the operator log.</div>
+            <div class="method-body">Operator log confirms ~18 hrs/campaign: managing 25+ WhatsApp groups, updating Sheets, re-confirming briefs, chasing payments. Structured intake + Kanban + auto-notifications compresses this to the slider target (default 6 hrs).</div>
             <div class="method-formula">Hours freed / yr = (18 − hrs_after) × campaigns_per_year</div>
             <div class="method-formula">Productivity gain % = (18 − hrs_after) / 18 × 100</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (18 − 6) × 378 = <strong>4,536 hours freed / year · 67% productivity gain</strong></div>
@@ -614,7 +614,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">3</div>
           <div>
             <div class="method-title">Lever 02 — Mismatch time eliminated</div>
-            <div class="method-body">Maliha Noor confirmed 33% of campaigns hit a budget-talent mismatch — discovered after hours of outreach. The portal's budget firewall catches this at the intake form before any time is invested in outreach. The 33% baseline is fixed; the target rate is the slider. Each prevented mismatch saves the rework hours set by the slider.</div>
+            <div class="method-body">Team interviews confirmed 33% of campaigns hit a budget-talent mismatch — discovered only after hours of outreach. The portal's budget firewall catches this at intake, before any outreach time is spent. 33% baseline is fixed; target rate and rework hours are sliders.</div>
             <div class="method-formula">Prevented / yr = (campaigns_before × 33%) − (campaigns_after × mismatch%_after)</div>
             <div class="method-formula">Rework hours avoided / yr = prevented × rework_hrs_per_mismatch</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (300 × 33% − 378 × 8%) × 8 = 69 × 8 = <strong>552 rework hours avoided / year</strong></div>
@@ -624,7 +624,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">4</div>
           <div>
             <div class="method-title">Lever 03 — Campaign capacity unlocked</div>
-            <div class="method-body">The constraint is not talent availability — it is operator coordination overhead. Currently, 18 hrs/campaign × 6 brands/cycle = 108 operator-hours. With the portal at 6 hrs/campaign, the same 108 hours serves 18 brands. Peak Season 2026 confirms this: 32 brands aligned, only 6 executed. PKR 38.75M in budgets went unserved because of a coordination ceiling.</div>
+            <div class="method-body">The constraint is coordination overhead, not talent availability. 18 hrs × 6 brands = 108 operator-hours. At 6 hrs/campaign the same 108 hours serves 18 brands. Peak season confirms this: 32 brands aligned, only 6 executed — PKR 38.75M in budgets went unserved.</div>
             <div class="method-formula">Brands served / cycle = min(brands_onboarded, round(6 × 18 / hrs_after))</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: min(22, round(6 × 18 / 6)) = <strong>18 brands per cycle · +12 additional brands</strong></div>
           </div>
@@ -633,7 +633,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">5</div>
           <div>
             <div class="method-title">Lever 04 — Payment speed gained</div>
-            <div class="method-body">Today: 3–7 day payment delay because proof is shared via WhatsApp screenshot and WHT (14% withholding tax) surprises brands mid-campaign. The portal's escrow wallet holds payment proof in-system, WHT is disclosed at New Brief stage, and release triggers automatically on content approval. Target: &lt;24 hours. This is fixed as a target per Step 7 — not a slider — because it is a binary system feature, not a gradual improvement.</div>
+            <div class="method-body">Today: 3–7 day delay because proof is shared via WhatsApp screenshot and WHT (14%) surprises brands mid-campaign. The portal holds payment in escrow, discloses WHT at intake, and auto-releases on content approval. Fixed target: &lt;24 hrs — a binary system feature, not a slider.</div>
             <div class="method-formula">Fixed assumption: 5 days before → 1 day after (80% faster) · campaign-days freed = 4 × campaigns/yr</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: 4 days × 378 campaigns = <strong>1,512 campaign-days freed / year</strong></div>
           </div>
@@ -642,7 +642,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">6</div>
           <div>
             <div class="method-title">Lever 05 — Brand GMV uplift enabled (0% LAAM take)</div>
-            <div class="method-body">The portal enables better-executed campaigns — right talent, validated brief, right timing, no inventory mismatch. Better execution drives brand GMV uplift. LAAM takes 0% of this GMV; the value for LAAM is brand loyalty and platform retention. We use Bareen × Hira Faisal (+141%, PKR 2.64M incremental) as the conservative benchmark.</div>
+            <div class="method-body">Better execution (right talent, validated brief, no mismatch) drives brand GMV. LAAM takes 0% — the value is brand loyalty and retention. Conservative benchmark: Bareen × Hira Faisal +141% (PKR 2.64M incremental). Sajal Aly +652% excluded as an A-tier outlier.</div>
             <div class="method-formula">Brand GMV enabled = campaigns/yr × uplift_hit_rate% × avg_incremental_GMV</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: 378 × 45% × PKR 1,200,000 = <strong>PKR 204M brand GMV enabled / year · LAAM take: PKR 0</strong></div>
           </div>
@@ -651,7 +651,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     </div>
     <div class="note">
       <div class="note-ey">Why Sajal Aly is excluded from the base case GMV figure</div>
-      <div class="note-body">Urge Pret × Sajal Aly generated +652% GMV (PKR 2.76M → PKR 20.73M). This is a top-0.1% A-tier celebrity result that cannot be replicated across LAAM's full 32-brand portfolio. Using it would inflate projections dishonestly. The base case uses PKR 1.2M incremental GMV — approximately 45% of what Bareen × Hira Faisal actually achieved (PKR 2.64M) — which is genuinely conservative.</div>
+      <div class="note-body">Urge Pret × Sajal Aly generated +652% GMV (PKR 2.76M → PKR 20.73M) — a top-0.1% A-tier result that cannot be replicated across 32 brands. The base case uses PKR 1.2M incremental GMV, roughly 45% of what Bareen × Hira Faisal actually achieved, which is genuinely conservative.</div>
     </div>
   </div>
 
@@ -738,18 +738,18 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
             <tr><td>Brands requesting PRaaS</td><td>32 aligned (confirmed)</td><td>32 (same demand)</td><td><span class="badge">No change</span></td></tr>
             <tr style="background:var(--paper-2);"><td><strong>Brands actually served</strong></td><td><strong>6</strong> (19% of aligned)</td><td><strong>≥18</strong> (≥56%)</td><td><span class="badge badge-up">3× capacity</span></td></tr>
             <tr><td>Unserved brand budgets</td><td>PKR 38.75M (26 brands)</td><td>Fully servable</td><td><span class="badge badge-up">PKR 38.75M unlocked</span></td></tr>
-            <tr style="background:var(--paper-2);"><td>Coordination hrs / campaign</td><td>15–20 hrs (Aiman log)</td><td>6–8 hrs (portal)</td><td><span class="badge badge-up">~67% reduction</span></td></tr>
+            <tr style="background:var(--paper-2);"><td>Coordination hrs / campaign</td><td>15–20 hrs (operator log)</td><td>6–8 hrs (portal)</td><td><span class="badge badge-up">~67% reduction</span></td></tr>
             <tr><td>WhatsApp groups managed</td><td>25+ concurrently</td><td>0 (retired at Gate 3)</td><td><span class="badge badge-up">−25 groups</span></td></tr>
             <tr style="background:var(--paper-2);"><td>Payment delay per campaign</td><td>3–7 days (WA bank transfer)</td><td>&lt;24 hours (escrow)</td><td><span class="badge badge-up">~80% faster</span></td></tr>
             <tr><td>Post-campaign GMV data</td><td>0% captured</td><td>100% via dashboard</td><td><span class="badge badge-up">Full visibility</span></td></tr>
-            <tr style="background:var(--paper-2);"><td>Mismatch rejection rate</td><td>33% (Maliha interview)</td><td>&lt;8% (budget firewall)</td><td><span class="badge badge-up">−75% mismatches</span></td></tr>
+            <tr style="background:var(--paper-2);"><td>Mismatch rejection rate</td><td>33% (team interview)</td><td>&lt;8% (budget firewall)</td><td><span class="badge badge-up">−75% mismatches</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="note">
       <div class="note-ey">Why the Kainat Faisal campaigns failed — and how the portal prevents this</div>
-      <div class="note-body">The two Kainat Faisal kaftaan campaigns declined −59% and −91% in March 2026. Kaftaan is a seasonal product already declining in February. The problem: this campaign should never have been approved for March. The portal's inventory gate (blocks go-live if stock is declining) and brief validation layer (checks product seasonality at submission) would have caught this before any coordinator time was spent — preventing a poor result from being attributed to the talent.</div>
+      <div class="note-body">The two Kainat Faisal kaftaan campaigns fell −59% and −91% in March 2026. Kaftaan was already a declining seasonal product in February — this campaign should never have gone live in March. The portal's inventory gate and brief validation layer would have flagged this at submission, before any coordinator time was spent.</div>
     </div>
   </div>
 
@@ -792,11 +792,11 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 const TOTAL_BRANDS   = 32;   // aligned brands in live portfolio
 const BRANDS_CURRENT = 6;    // brands served in peak season 2026
 const MAX_CAP_MULT   = 1.8;  // conservative cap on cycle compression benefit
-const HR_BEFORE      = 18;   // fixed: Aiman Murtaza operator log
-const MM_BEFORE      = 33;   // fixed: Maliha Noor interview (%)
+const HR_BEFORE      = 18;   // fixed: operator log
+const MM_BEFORE      = 33;   // fixed: team interview (%)
 const PAY_BEFORE     = 5;    // fixed: 3–7 day midpoint (days)
 const PAY_AFTER      = 1;    // fixed: Step 7 target <24 hrs (days)
-const CYCLE_BEFORE   = 21;   // fixed: Aiman interview (days)
+const CYCLE_BEFORE   = 21;   // fixed: operator log (days)
 
 // ─── SCENARIO PRESETS ────────────────────────────────────────────────────────
 const SCENARIO_PRESETS = {
