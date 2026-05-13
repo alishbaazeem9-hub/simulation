@@ -248,7 +248,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="baf-row"><span class="baf-metric">Brief → go-live cycle time</span><span class="baf-val bad">~21 days</span></div>
         <div class="baf-row"><span class="baf-metric">Budget-talent mismatch rate</span><span class="baf-val bad">33%</span></div>
         <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val bad">3–7 days</span></div>
-        <div class="baf-row"><span class="baf-metric">Brands served per Eid season</span><span class="baf-val bad">6 of 32 aligned</span></div>
+        <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val bad">6 of 32 aligned</span></div>
         <div class="baf-row"><span class="baf-metric">Campaigns with any ROI data</span><span class="baf-val bad">0%</span></div>
         <div class="baf-source">Source: Aiman Murtaza operator logs · Maliha Noor interview · Apr 2026</div>
       </div>
@@ -259,7 +259,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="baf-row"><span class="baf-metric">Brief → go-live cycle time</span><span class="baf-val good" id="b-cycle">9.8 days</span></div>
         <div class="baf-row"><span class="baf-metric">Budget-talent mismatch rate</span><span class="baf-val good" id="b-mismatch">8%</span></div>
         <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val good" id="b-payment">&lt;24 hrs</span></div>
-        <div class="baf-row"><span class="baf-metric">Brands served per Eid season</span><span class="baf-val good" id="b-brands">18 of 32</span></div>
+        <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val good" id="b-brands">18 of 32</span></div>
         <div class="baf-row"><span class="baf-metric">Campaigns with GMV dashboard</span><span class="baf-val good">100%</span></div>
         <div class="baf-source">Source: Step 7 Scenario C targets · Step 8 Action Plan · Tech Design doc</div>
       </div>
@@ -283,7 +283,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="h-sub" id="h-rework-sub">From mismatch elimination</div>
       </div>
       <div class="hero-cell">
-        <div class="h-ey">Brands served next Eid</div>
+        <div class="h-ey">Brands served per cycle</div>
         <div class="h-val" id="h-brands">—</div>
         <div class="h-sub">Up from 6 — same operator, less friction</div>
       </div>
@@ -307,7 +307,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Portal adoption</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of the 32 brands that confirmed PRaaS interest at Choti Eid 2026</div></div>
+              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of the 32 brands that confirmed PRaaS interest in the live brand portfolio</div></div>
               <div class="field-val" id="lv-brands">22</div>
             </div>
             <div class="track"><div class="fill" id="f-brands"></div></div>
@@ -432,7 +432,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Campaign volume &amp; brand GMV context</div>
           <div class="field">
             <div class="field-row">
-              <div><div class="field-label">Active campaigns / month (today)</div><div class="field-hint">25 WhatsApp groups at Eid peak = 25 concurrent campaigns</div></div>
+              <div><div class="field-label">Active campaigns / month (today)</div><div class="field-hint">25 WhatsApp groups at peak = 25 concurrent campaigns running in parallel</div></div>
               <div class="field-val" id="lv-cpm">25</div>
             </div>
             <div class="track"><div class="fill" id="f-cpm"></div></div>
@@ -520,7 +520,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
               <div class="lv-calc"><span class="lv-calc-label">Additional campaigns vs today</span><span class="lv-calc-val" id="l3-additional">—</span></div>
               <div class="lv-value" id="l3-v">—</div>
               <div class="lv-value-sub" id="l3-brands">—</div>
-              <div class="lv-proof">Choti Eid 2026: 32 brands aligned, only 6 executed. PKR 38.75M in brand budgets went unserved — not demand failure, but coordination ceiling</div>
+              <div class="lv-proof">Peak Season 2026: 32 brands aligned, only 6 executed. PKR 38.75M in brand budgets went unserved — not demand failure, but coordination ceiling</div>
             </div>
 
             <!-- LEVER 4: PAYMENT SPEED -->
@@ -574,15 +574,15 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="card">
           <div class="card-hd">
             <div>
-              <div class="card-title">Brands served per Eid season — before vs after</div>
-              <div class="card-sub">Same operator, same team — fewer hours per brand = more brands served</div>
+              <div class="card-title">Brands served per campaign cycle — before vs after</div>
+              <div class="card-sub">Same operator, same team — fewer hours per brand = more brands served per cycle</div>
             </div>
             <span class="badge" id="chart-sc">Base case</span>
           </div>
           <div class="card-bd">
             <svg id="cap-chart" viewBox="0 0 700 220" style="width:100%;height:auto;display:block;"></svg>
             <div class="year-row">
-              <div><div class="ys-label">Today (Choti Eid 2026)</div><div class="ys-val neg">6 brands</div></div>
+              <div><div class="ys-label">Today (current state)</div><div class="ys-val neg">6 brands</div></div>
               <div><div class="ys-label">With portal (Y1)</div><div class="ys-val" id="y1-brands">—</div></div>
               <div><div class="ys-label">With portal (Y2 +8%)</div><div class="ys-val" id="y2-brands">—</div></div>
               <div><div class="ys-label">With portal (Y3 +15%)</div><div class="ys-val" id="y3-brands">—</div></div>
@@ -635,7 +635,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">2</div>
           <div>
             <div class="method-title">Lever 01 — Coordination hours reclaimed</div>
-            <div class="method-body">Aiman Murtaza confirmed ~18 hours per campaign of coordination: managing WhatsApp groups (25+ at Eid peak), updating Google Sheets manually, calling brands to re-confirm briefs, chasing payments, and tracking content approvals. The portal's structured intake form, Kanban board, and automated status notifications compress this to ~6 hours. No WhatsApp groups remain after Gate 3.</div>
+            <div class="method-body">Aiman Murtaza confirmed ~18 hours per campaign of coordination: managing WhatsApp groups (25+ at peak), updating Google Sheets manually, calling brands to re-confirm briefs, chasing payments, and tracking content approvals. The portal's structured intake form, Kanban board, and automated status notifications compress this to ~6 hours. No WhatsApp groups remain after Gate 3.</div>
             <div class="method-formula">Hours freed / yr = (hrs_before − hrs_after) × campaigns_per_year</div>
             <div class="method-formula">Productivity gain % = (hrs_before − hrs_after) / hrs_before × 100</div>
             <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: (18 − 6) × 378 = <strong>4,536 hours freed / year</strong> · <strong>67% productivity gain per campaign</strong></div>
@@ -657,10 +657,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="method-num">4</div>
           <div>
             <div class="method-title">Lever 03 — Campaign capacity unlocked</div>
-            <div class="method-body">The capacity constraint is not talent availability — it is operator coordination overhead. Currently, 18 hrs/campaign × 6 brands/season = 108 operator-hours per Eid. With the portal at 6 hrs/campaign, the same 108 hours serves 18 brands. This is not a projection — it is arithmetic. Choti Eid 2026 data confirms the problem: 32 brands wanted PRaaS, only 6 were executed. PKR 38.75M in brand budgets went unserved because of coordination bottleneck, not demand.</div>
-            <div class="method-formula">Brands served / Eid = min(brands_onboarded, round(6 × hrs_before / hrs_after))</div>
-            <div class="method-formula">Additional brands = brands_after_Eid − 6 (current)</div>
-            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: min(22, round(6 × 18 / 6)) = min(22, 18) = <strong>18 brands per Eid</strong> · <strong>+12 additional brands served</strong></div>
+            <div class="method-body">The capacity constraint is not talent availability — it is operator coordination overhead. Currently, 18 hrs/campaign × 6 brands/cycle = 108 operator-hours per campaign cycle. With the portal at 6 hrs/campaign, the same 108 hours serves 18 brands. This is not a projection — it is arithmetic. Peak Season 2026 data confirms the problem: 32 brands wanted PRaaS, only 6 were executed. PKR 38.75M in brand budgets went unserved because of coordination bottleneck, not demand.</div>
+            <div class="method-formula">Brands served / cycle = min(brands_onboarded, round(6 × hrs_before / hrs_after))</div>
+            <div class="method-formula">Additional brands = brands_after_cycle − 6 (current)</div>
+            <div class="method-body" style="margin-top:8px;color:var(--ink-5);">Base: min(22, round(6 × 18 / 6)) = min(22, 18) = <strong>18 brands per cycle</strong> · <strong>+12 additional brands served</strong></div>
           </div>
         </div>
 
@@ -778,7 +778,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     <!-- OPERATIONAL PAIN DATA -->
     <div class="card" style="margin-bottom:14px;">
       <div class="card-hd">
-        <div class="card-title">Choti Eid 2026 — The capacity bottleneck</div>
+        <div class="card-title">Peak Season 2026 — The capacity bottleneck</div>
         <div class="card-sub">32 brands aligned · only 6 executed · not a demand problem — a coordination ceiling</div>
       </div>
       <div style="overflow-x:auto;">
@@ -819,7 +819,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <table class="sens-tbl">
         <thead><tr>
           <th>Scenario</th><th>Adoption</th><th>Mismatch after</th><th>Cycle after</th><th>Hrs after</th>
-          <th class="num">Hrs freed / yr</th><th class="num">Rework hrs avoided</th><th class="num">Brands / Eid</th><th class="num">Pay speed gain</th><th class="num">Brand GMV enabled</th>
+          <th class="num">Hrs freed / yr</th><th class="num">Rework hrs avoided</th><th class="num">Brands / cycle</th><th class="num">Pay speed gain</th><th class="num">Brand GMV enabled</th>
         </tr></thead>
         <tbody id="full-sens-body"></tbody>
       </table>
@@ -847,8 +847,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 
 <script>
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
-const TOTAL_BRANDS    = 32;   // aligned brands from Choti Eid 2026
-const BRANDS_CURRENT  = 6;    // brands actually served at Choti Eid 2026
+const TOTAL_BRANDS    = 32;   // aligned brands from live portfolio
+const BRANDS_CURRENT  = 6;    // brands actually served in peak season 2026
 const MAX_CAP_MULT    = 1.8;  // conservative cap on cycle compression benefit
 const LAAM_COMMISSION = 0;    // 0% — PRaaS is a complementary service
 
@@ -1066,7 +1066,7 @@ function drawStress() {
           <div style="font-family:var(--mono);font-size:13px;font-weight:500;">${fmtHrs(r.totalHrsSaved)}</div>
         </div>
         <div style="text-align:right;">
-          <div style="font-size:11px;color:var(--ink-5);">Brands / Eid</div>
+          <div style="font-size:11px;color:var(--ink-5);">Brands / cycle</div>
           <div style="font-family:var(--mono);font-size:13px;font-weight:500;">${r.brandsThisEid}</div>
         </div>
         <div style="text-align:right;">
@@ -1163,11 +1163,11 @@ function update() {
   document.getElementById('l2-pct').textContent       = fmtPct(r.mismatchDropPct) + ' reduction in mismatch rate';
 
   // Lever 3
-  document.getElementById('l3-formula').textContent    = `min(${st.brands}, round(6 × ${st.hrB} / ${st.hrA})) brands/Eid`;
+  document.getElementById('l3-formula').textContent    = `min(${st.brands}, round(6 × ${st.hrB} / ${st.hrA})) brands/cycle`;
   document.getElementById('l3-cap-mult').textContent   = r.capMult.toFixed(2) + '× (cycle: ' + st.cyB + '→' + st.cyA + ' days)';
   document.getElementById('l3-camps').textContent      = fmtN(r.campYearA) + ' / yr';
   document.getElementById('l3-additional').textContent = '+' + fmtN(r.additionalCamps) + ' more than today';
-  document.getElementById('l3-v').textContent          = r.brandsThisEid + ' brands / Eid season';
+  document.getElementById('l3-v').textContent          = r.brandsThisEid + ' brands / campaign cycle';
   document.getElementById('l3-brands').textContent     = '+' + r.additionalBrands + ' additional brands served vs today (' + BRANDS_CURRENT + ')';
 
   // Lever 4
