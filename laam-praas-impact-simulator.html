@@ -111,6 +111,8 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:20px;height:20px;b
 input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15);}
 input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--card);border:2px solid var(--ink);cursor:grab;}
 .range-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--ink-6);font-family:var(--mono);}
+.field-hint{font-size:10.5px;color:var(--ink-5);margin-top:2px;line-height:1.4;}
+.data-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:500;color:#14532d;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:4px;padding:1px 6px;margin-top:4px;}
 .fixed-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:500;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:1px 6px;margin-top:4px;}
 
 /* SUMMARY CALLOUT */
@@ -298,7 +300,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="card-hd">
           <div>
             <div class="card-title">Adjust inputs</div>
-            <div class="card-sub">Baselines fixed · targets are adjustable</div>
+            <div class="card-sub">8 sliders · blue = fixed baseline · green = data source</div>
           </div>
           <span class="badge badge-solid" id="sc-badge">Base case</span>
         </div>
@@ -308,12 +310,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Portal adoption</div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Brands onboarded to portal</div>
+              <div><div class="field-label">Brands onboarded to portal</div><div class="field-hint">Of 32 brands that confirmed PRaaS interest</div></div>
               <div class="field-val" id="lv-brands">22</div>
             </div>
             <div class="track"><div class="fill" id="f-brands"></div></div>
             <input type="range" id="s-brands" min="5" max="32" step="1" value="22" oninput="update()">
-            <div class="range-labels"><span>5</span><span>32 brands</span></div>
+            <div class="range-labels"><span>5 brands</span><span>32 (all aligned)</span></div>
+            <div class="data-tag">📊 Base: 70% of 32 aligned = 22 brands</div>
           </div>
 
           <div class="divider"></div>
@@ -322,7 +325,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Time savings targets</div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Coordination hrs with portal / campaign</div>
+              <div><div class="field-label">Coordination hrs with portal / campaign</div><div class="field-hint">Structured intake + auto-notifications replaces WhatsApp back-and-forth</div></div>
               <div class="field-val" id="lv-hr-a">6 hrs</div>
             </div>
             <div class="track"><div class="fill" id="f-hr-a"></div></div>
@@ -332,13 +335,14 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           </div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Cycle compression</div>
+              <div><div class="field-label">Cycle compression</div><div class="field-hint">How much faster is brief → go-live? Baseline: 21 days</div></div>
               <div class="field-val" id="lv-compr">53%</div>
             </div>
             <div class="track"><div class="fill" id="f-compr"></div></div>
             <input type="range" id="s-compr" min="15" max="72" step="1" value="53" oninput="update()">
             <div class="range-labels"><span>15% faster</span><span>72% faster</span></div>
-            <div class="fixed-tag">🔒 Baseline: 21-day cycle → <span id="lv-cy-derived">9.9</span> days with portal</div>
+            <div class="data-tag">📋 Target: 21 → 9.8 days = 53% compression</div>
+            <div style="font-size:10px;color:var(--ink-5);font-family:var(--mono);margin-top:4px;">21 days → <span id="lv-cy-derived">9.9</span> days with portal</div>
           </div>
 
           <div class="divider"></div>
@@ -347,7 +351,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Mismatch quality target</div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Mismatch rate with portal</div>
+              <div><div class="field-label">Mismatch rate with portal</div><div class="field-hint">Budget firewall catches wrong-tier talent at intake — before outreach begins</div></div>
               <div class="field-val" id="lv-mm-a">8%</div>
             </div>
             <div class="track"><div class="fill" id="f-mm-a"></div></div>
@@ -357,12 +361,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           </div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Rework hrs per mismatch event</div>
+              <div><div class="field-label">Rework hrs per mismatch event</div><div class="field-hint">Brief rewrite + re-outreach + rescheduling per failed match</div></div>
               <div class="field-val" id="lv-rework">8 hrs</div>
             </div>
             <div class="track"><div class="fill" id="f-rework"></div></div>
             <input type="range" id="s-rework" min="2" max="20" step="1" value="8" oninput="update()">
             <div class="range-labels"><span>2 hrs</span><span>20 hrs</span></div>
+            <div class="data-tag">📊 Est: brief rewrite + re-outreach + delay ≈ 8 hrs</div>
           </div>
 
           <div class="divider"></div>
@@ -371,31 +376,33 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="sec-ey">Campaign volume &amp; brand GMV</div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Active campaigns / month</div>
+              <div><div class="field-label">Active campaigns / month (today)</div><div class="field-hint">25 WhatsApp groups at peak = 25 concurrent campaigns</div></div>
               <div class="field-val" id="lv-cpm">25</div>
             </div>
             <div class="track"><div class="fill" id="f-cpm"></div></div>
             <input type="range" id="s-cpm" min="5" max="60" step="1" value="25" oninput="update()">
             <div class="range-labels"><span>5</span><span>60</span></div>
-            <div class="fixed-tag">🔒 Baseline: 25 active WhatsApp groups</div>
+            <div class="data-tag">📊 25 active WhatsApp groups = 25 campaigns at peak</div>
           </div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">% of campaigns achieving GMV uplift</div>
+              <div><div class="field-label">% of campaigns achieving GMV uplift</div><div class="field-hint">Not every campaign qualifies — right talent, brief, and timing required</div></div>
               <div class="field-val" id="lv-uplift-pct">45%</div>
             </div>
             <div class="track"><div class="fill" id="f-uplift-pct"></div></div>
             <input type="range" id="s-uplift-pct" min="10" max="80" step="5" value="45" oninput="update()">
             <div class="range-labels"><span>10%</span><span>80%</span></div>
+            <div class="data-tag">📊 2 of 4 tracked campaigns positive ≈ 50% hit rate</div>
           </div>
           <div class="field">
             <div class="field-row">
-              <div class="field-label">Avg incremental brand GMV / campaign (PKR)</div>
+              <div><div class="field-label">Avg incremental brand GMV / campaign (PKR)</div><div class="field-hint">Brand's incremental sales per well-executed campaign · LAAM takes 0%</div></div>
               <div class="field-val" id="lv-gmv-inc">PKR 1.2M</div>
             </div>
             <div class="track"><div class="fill" id="f-gmv-inc"></div></div>
             <input type="range" id="s-gmv-inc" min="200000" max="5000000" step="100000" value="1200000" oninput="update()">
             <div class="range-labels"><span>PKR 200K</span><span>PKR 5M</span></div>
+            <div class="data-tag">📊 Bareen × Hira Faisal: PKR 2.64M · base uses PKR 1.2M</div>
           </div>
 
         </div>
@@ -406,8 +413,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 
         <!-- SUMMARY CALLOUT -->
         <div class="summary-callout">
-          <div class="sum-label">Bottom line</div>
-          <div class="sum-text">The portal frees <strong id="sum-hrs">—</strong> of operator coordination time per year and cuts the brief-to-go-live cycle by <strong id="sum-cycle">—</strong> — from 21 days to <strong id="sum-cy-days">—</strong>.</div>
+          <div class="sum-label">Bottom line · base case</div>
+          <div class="sum-text">The portal frees <strong id="sum-hrs">—</strong> of operator coordination time per year, enables <strong id="sum-brands">—</strong> brands per campaign cycle vs 6 today, and cuts the brief-to-go-live cycle by <strong id="sum-cycle">—</strong> — from 21 days to <strong id="sum-cy-days">—</strong>.</div>
         </div>
 
         <!-- FIVE LEVERS -->
@@ -873,6 +880,7 @@ function update() {
 
   // Summary callout
   document.getElementById('sum-hrs').textContent     = fmtHrs(r.totalHrsSaved);
+  document.getElementById('sum-brands').textContent  = r.brandsCycle;
   document.getElementById('sum-cycle').textContent   = fmtPct(r.cycleDropPct);
   document.getElementById('sum-cy-days').textContent = r.cyA.toFixed(1)+' days';
 
