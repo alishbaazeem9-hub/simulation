@@ -252,7 +252,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="baf-row"><span class="baf-metric">Budget-talent mismatch rate</span><span class="baf-val bad">33%</span></div>
         <div class="baf-row"><span class="baf-metric">Payment release delay</span><span class="baf-val bad">3–7 days</span></div>
         <div class="baf-row"><span class="baf-metric">Post-campaign GMV data captured</span><span class="baf-val bad">0%</span></div>
-        <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val bad">6</span></div>
+        <div class="baf-row"><span class="baf-metric">Brands served per campaign cycle</span><span class="baf-val bad">6 of 32 aligned</span></div>
       </div>
       <div class="baf-arrow">→</div>
       <div class="baf-side after">
@@ -880,7 +880,7 @@ function update() {
   document.getElementById('b-hours').textContent    = st.hrA+' hrs';
   document.getElementById('b-cycle').textContent    = r.cyA.toFixed(1)+' days';
   document.getElementById('b-mismatch').textContent = st.mmA+'%';
-  document.getElementById('b-brands').textContent   = r.brandsCycle+' brands';
+  document.getElementById('b-brands').textContent   = r.brandsCycle+' of 32';
 
   // Lever 1
   document.getElementById('l1-formula').textContent   = `(18 − ${st.hrA}) hrs/campaign × ${fmtN(r.campYearA)} campaigns/yr`;
